@@ -1,0 +1,10 @@
+uuid: 765bdecd-4d1f-4ad6-bb3f-eadc3df8aa6e
+langcode: de
+status: true
+dependencies: {  }
+id: documents
+label: Dokumente
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

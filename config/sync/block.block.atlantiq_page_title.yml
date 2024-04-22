@@ -1,0 +1,20 @@
+uuid: 83cc2523-53fd-4716-9611-56ac4812c150
+langcode: de
+status: true
+dependencies:
+  theme:
+    - atlantiq
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: atlantiq_page_title
+theme: atlantiq
+region: content_title
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: Seitentitel
+  label_display: '0'
+  provider: core
+visibility: {  }

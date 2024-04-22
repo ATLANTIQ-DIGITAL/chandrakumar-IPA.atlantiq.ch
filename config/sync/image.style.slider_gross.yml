@@ -1,0 +1,15 @@
+uuid: 089972b1-b7a4-42bc-a06b-5ddfc2b9f2d6
+langcode: de
+status: true
+dependencies: {  }
+name: slider_gross
+label: 'Slider gross'
+effects:
+  5ace21c1-9321-4f5d-bd2b-6b29d454d603:
+    uuid: 5ace21c1-9321-4f5d-bd2b-6b29d454d603
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1300
+      height: 732
+      anchor: center-center

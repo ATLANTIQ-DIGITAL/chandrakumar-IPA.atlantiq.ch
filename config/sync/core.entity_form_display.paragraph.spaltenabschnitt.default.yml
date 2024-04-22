@@ -1,0 +1,50 @@
+uuid: 67262691-a2cb-4400-84dd-ba4c275a283c
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spaltenabschnitt.field_breiteres_element
+    - field.field.paragraph.spaltenabschnitt.field_spalten
+    - paragraphs.paragraphs_type.spaltenabschnitt
+  module:
+    - paragraphs
+id: paragraph.spaltenabschnitt.default
+targetEntityType: paragraph
+bundle: spaltenabschnitt
+mode: default
+content:
+  field_breiteres_element:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_spalten:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Seitenabschnitt
+      title_plural: Seitenabschnitte
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true

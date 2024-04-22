@@ -1,0 +1,10 @@
+uuid: b479a6d8-564d-4c20-9c51-20f174d7d4e2
+langcode: de
+status: true
+dependencies:
+  module:
+    - media
+id: media.slider
+label: Slider
+targetEntityType: media
+cache: true

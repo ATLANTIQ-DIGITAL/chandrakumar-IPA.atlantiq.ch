@@ -1,0 +1,67 @@
+uuid: 6d4930e9-01e1-4a05-88d5-b777f3d10a87
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.document
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video_extern
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: accordion
+label: Inhalte
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      document: document
+      image: image
+      text: text
+      video_extern: video_extern
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -23
+        enabled: false
+      accordion_container:
+        weight: -22
+        enabled: false
+      audio:
+        weight: -21
+        enabled: false
+      document:
+        weight: -20
+        enabled: true
+      documents:
+        weight: -19
+        enabled: false
+      image:
+        weight: -18
+        enabled: true
+      images:
+        weight: -17
+        enabled: false
+      text:
+        weight: -16
+        enabled: true
+      text_plain:
+        weight: -15
+        enabled: false
+      video_extern:
+        weight: -14
+        enabled: true
+      video_intern:
+        weight: -13
+        enabled: false
+field_type: entity_reference_revisions

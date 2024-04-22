@@ -1,0 +1,93 @@
+.paragraph--type--accordion.paragraph--view-mode--default{
+  width: 792px;
+}
+
+.accordion-body{
+  padding: 0;
+  overflow: hidden; /* Versteckt den Inhalt, wenn er nicht angezeigt wird */
+  max-height: 0; /* Setzt die maximale Höhe auf 0, um den Inhalt auszublenden */
+  opacity: 0;
+  transition: max-height 1s ease-out, opacity 1s ease-out; /* Fügt einen Übergangseffekt hinzu */
+}
+.accordion-collapse.show .accordion-body {
+  max-height: 2000px;
+  opacity: 1;
+}
+.accordion-collapse:not(.show) .accordion-body{
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1s ease-out, opacity 1s ease-out;
+}
+.accordion-button{
+  padding-left: 0;
+}
+.accordion-item {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+.accordion-header{
+  border-top: 1px solid black!important;
+  border-bottom: none;
+
+}
+/* Entfernen der blauen Hervorhebung beim Klicken */
+.accordion-button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Anpassung des Hintergrundes beim Aktivieren des Accordion-Items */
+.accordion-button:not(.collapsed) {
+  background-color: transparent; /* blauen Hintergrund Hervorhebung rausnehmen */
+  color: black;
+  box-shadow: none!important;
+}
+
+
+#plus_icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#minus_icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.accordion-button {
+  #plus_icon {
+    display: none;
+  }
+  #minus_icon {
+    display: block;
+  }
+}
+
+.accordion-button.collapsed {
+  #plus_icon {
+    display: block;
+  }
+  #minus_icon {
+    display: none;
+  }
+}
+
+/* pfeil ausblenden */
+.accordion-button.collapsed::after{
+  background-image: none;
+}
+.accordion-button:not(.collapsed)::after{
+  background-image: none;
+}
+/* Border-top vom Anhang ausblenden innerhalb vom Accordion*/
+.paragraph--type--accodionpiece.paragraph--view-mode--default .paragraph--type--addition{
+  border: none;
+}
+

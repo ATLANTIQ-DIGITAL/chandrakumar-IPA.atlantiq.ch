@@ -1,0 +1,20 @@
+uuid: 3507924e-5c9b-4b5e-97b0-9d645c447556
+langcode: de
+status: true
+dependencies:
+  theme:
+    - atlantiq
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: atlantiq_primary_admin_actions
+theme: atlantiq
+region: highlighted
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primäre Verwaltungsaktionen'
+  label_display: '0'
+  provider: core
+visibility: {  }

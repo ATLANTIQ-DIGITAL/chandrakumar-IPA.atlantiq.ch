@@ -1,0 +1,32 @@
+.paragraph--type--button > .btn,
+.paragraph--type--button-externe-links- > .btn {
+  border-radius: 8px;
+  border: 1px solid $black;
+  background-color: $white;
+  margin-bottom: 60px;
+
+  transition: padding-right ease 300ms;
+
+  svg {
+    position: relative;
+    left: 0;
+    transition: left ease 300ms;
+  }
+  @include setPaddingY(8px);
+  h4 {
+    margin: 0;
+  }
+}
+
+.paragraph--type--button > .btn:hover,
+.paragraph--type--button-externe-links- > .btn:hover {
+  background-color: white;
+  border-color: black;
+  padding-right: 20px;
+  a {
+    color: black;
+  }
+  svg {
+    left: 8px;
+  }
+}

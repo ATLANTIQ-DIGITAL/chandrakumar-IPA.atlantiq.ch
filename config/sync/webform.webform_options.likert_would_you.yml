@@ -1,0 +1,19 @@
+uuid: 6cf328f7-891c-45f3-a3e7-f0ad92e4e052
+langcode: de
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: qBS2TmfAJB37Qn3TnrNM8x4AWimmDapcizzRllgo0fo
+id: likert_would_you
+label: 'Likert: Would You'
+category: Likert
+likert: true
+options: |
+  1: Definitely Not
+  2: Probably Not
+  3: Not Sure
+  4: Probably
+  5: Definitely

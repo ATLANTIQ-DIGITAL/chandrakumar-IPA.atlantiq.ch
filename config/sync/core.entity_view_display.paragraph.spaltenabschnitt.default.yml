@@ -1,0 +1,33 @@
+uuid: 6a89cf22-2d9e-4af9-a43b-2c90da7d3ba9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.spaltenabschnitt.field_breiteres_element
+    - field.field.paragraph.spaltenabschnitt.field_spalten
+    - paragraphs.paragraphs_type.spaltenabschnitt
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.spaltenabschnitt.default
+targetEntityType: paragraph
+bundle: spaltenabschnitt
+mode: default
+content:
+  field_breiteres_element:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_spalten:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

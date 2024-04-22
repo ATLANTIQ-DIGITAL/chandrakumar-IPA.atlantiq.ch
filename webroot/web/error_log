@@ -1,0 +1,63 @@
+[05-Jul-2023 11:12:57 Europe/Zurich] Uncaught PHP Exception Twig\Error\LoaderError: "Template "@cctheme/img/logo/Chris-Casutt-logo-small-light.svg" is not defined." at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/themes/custom/atlantiq/templates/layout/page.html.twig line 187
+[05-Jul-2023 11:29:07 Europe/Zurich] Uncaught PHP Exception Twig\Error\LoaderError: "Template "@cctheme/img/logo/Chris-Casutt-logo-small-light.svg" is not defined." at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/themes/custom/atlantiq/templates/layout/page.html.twig line 187
+[12-Jul-2023 08:36:11 Europe/Zurich] Uncaught PHP Exception Drupal\Core\File\Exception\FileWriteException: "The destination directory 'public://2023-07' is not writable" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/media_library/src/Form/FileUploadForm.php line 331
+[12-Jul-2023 08:36:24 Europe/Zurich] Uncaught PHP Exception TypeError: "array_filter(): Argument #1 ($array) must be of type array, null given" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/media_library/src/Plugin/views/field/MediaLibrarySelectForm.php line 161
+[12-Jul-2023 08:36:58 Europe/Zurich] Uncaught PHP Exception Drupal\Core\File\Exception\FileWriteException: "The destination directory 'public://2023-07' is not writable" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/media_library/src/Form/FileUploadForm.php line 331
+[05-Apr-2024 16:50:41 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Entity\EntityStorageException: "SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '25-0-0-de' for key 'PRIMARY': INSERT INTO "paragraph__field_spalten" ("entity_id", "revision_id", "bundle", "delta", "langcode", "field_spalten_target_id", "field_spalten_target_revision_id") VALUES (:db_insert_placeholder_0, :db_insert_placeholder_1, :db_insert_placeholder_2, :db_insert_placeholder_3, :db_insert_placeholder_4, :db_insert_placeholder_5, :db_insert_placeholder_6), (:db_insert_placeholder_7, :db_insert_placeholder_8, :db_insert_placeholder_9, :db_insert_placeholder_10, :db_insert_placeholder_11, :db_insert_placeholder_12, :db_insert_placeholder_13); Array
+(
+    [:db_insert_placeholder_0] => 25
+    [:db_insert_placeholder_1] => 124
+    [:db_insert_placeholder_2] => spaltenabschnitt
+    [:db_insert_placeholder_3] => 0
+    [:db_insert_placeholder_4] => de
+    [:db_insert_placeholder_5] => 23
+    [:db_insert_placeholder_6] => 122
+    [:db_insert_placeholder_7] => 25
+    [:db_insert_placeholder_8] => 124
+    [:db_insert_placeholder_9] => spaltenabschnitt
+    [:db_insert_placeholder_10] => 1
+    [:db_insert_placeholder_11] => de
+    [:db_insert_placeholder_12] => 24
+    [:db_insert_placeholder_13] => 123
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/lib/Drupal/Core/Entity/Sql/SqlContentEntityStorage.php line 817
+[05-Apr-2024 17:04:52 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field_kachelbeschriftung_format' in 'where clause': SELECT 1 AS "expression"
+FROM
+"paragraph_revision__field_kachelbeschriftung" "t"
+WHERE ("field_kachelbeschriftung_value" IS NOT NULL) OR ("field_kachelbeschriftung_format" IS NOT NULL)
+LIMIT 1 OFFSET 0; Array
+(
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/mysql/src/Driver/Database/mysql/ExceptionHandler.php line 56
+[05-Apr-2024 17:05:57 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field_kachelbeschriftung_format' in 'where clause': SELECT 1 AS "expression"
+FROM
+"paragraph_revision__field_kachelbeschriftung" "t"
+WHERE ("field_kachelbeschriftung_value" IS NOT NULL) OR ("field_kachelbeschriftung_format" IS NOT NULL)
+LIMIT 1 OFFSET 0; Array
+(
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/mysql/src/Driver/Database/mysql/ExceptionHandler.php line 56
+[05-Apr-2024 17:06:43 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field_kachelbeschriftung_format' in 'where clause': SELECT 1 AS "expression"
+FROM
+"paragraph_revision__field_kachelbeschriftung" "t"
+WHERE ("field_kachelbeschriftung_value" IS NOT NULL) OR ("field_kachelbeschriftung_format" IS NOT NULL)
+LIMIT 1 OFFSET 0; Array
+(
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/mysql/src/Driver/Database/mysql/ExceptionHandler.php line 56
+[05-Apr-2024 17:07:40 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field_kachelbeschriftung_format' in 'where clause': SELECT 1 AS "expression"
+FROM
+"paragraph_revision__field_kachelbeschriftung" "t"
+WHERE ("field_kachelbeschriftung_value" IS NOT NULL) OR ("field_kachelbeschriftung_format" IS NOT NULL)
+LIMIT 1 OFFSET 0; Array
+(
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/mysql/src/Driver/Database/mysql/ExceptionHandler.php line 56
+[05-Apr-2024 17:07:55 Europe/Zurich] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field_kachelbeschriftung_format' in 'where clause': SELECT 1 AS "expression"
+FROM
+"paragraph_revision__field_kachelbeschriftung" "t"
+WHERE ("field_kachelbeschriftung_value" IS NOT NULL) OR ("field_kachelbeschriftung_format" IS NOT NULL)
+LIMIT 1 OFFSET 0; Array
+(
+)
+" at /home/cositsch/public_html/drupal.atlantiq.ch/webroot/web/core/modules/mysql/src/Driver/Database/mysql/ExceptionHandler.php line 56

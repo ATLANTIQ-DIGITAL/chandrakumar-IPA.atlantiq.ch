@@ -1,0 +1,22 @@
+uuid: e3c248a8-5104-4a3d-81c7-f3fda9a8b6bd
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gin
+_core:
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+id: gin_content
+theme: gin
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  label_display: '0'
+  provider: system
+visibility: {  }

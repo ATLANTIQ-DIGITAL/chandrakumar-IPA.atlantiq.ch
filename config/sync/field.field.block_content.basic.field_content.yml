@@ -1,0 +1,69 @@
+uuid: b48993ba-ad1d-46eb-b341-588abe969783
+langcode: de
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_content
+    - paragraphs.paragraphs_type.accordion_container
+    - paragraphs.paragraphs_type.document
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video_extern
+  module:
+    - entity_reference_revisions
+id: block_content.basic.field_content
+field_name: field_content
+entity_type: block_content
+bundle: basic
+label: Inhalte
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_container: accordion_container
+      document: document
+      image: image
+      text: text
+      video_extern: video_extern
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: false
+      accordion_container:
+        weight: 13
+        enabled: true
+      audio:
+        weight: 14
+        enabled: false
+      document:
+        weight: 15
+        enabled: true
+      documents:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: true
+      images:
+        weight: 18
+        enabled: false
+      text:
+        weight: 19
+        enabled: true
+      text_plain:
+        weight: 20
+        enabled: false
+      video_extern:
+        weight: 21
+        enabled: true
+      video_intern:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

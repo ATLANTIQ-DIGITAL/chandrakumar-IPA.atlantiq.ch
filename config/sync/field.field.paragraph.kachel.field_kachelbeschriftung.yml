@@ -1,0 +1,24 @@
+uuid: 993f4a38-f4c3-4461-8c10-87f79e234bc7
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_kachelbeschriftung
+    - filter.format.basic_html
+    - paragraphs.paragraphs_type.kachel
+  module:
+    - text
+id: paragraph.kachel.field_kachelbeschriftung
+field_name: field_kachelbeschriftung
+entity_type: paragraph
+bundle: kachel
+label: kachelbeschriftung
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text_long

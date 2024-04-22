@@ -1,0 +1,29 @@
+.block-views-exposed-filter-blocksuche-page-1 {
+  form {
+    position: relative;
+  }
+  .form-actions {
+    &>input:first-child {
+      text-indent: -999px;
+      overflow: hidden;
+      width: 40px;
+      padding: 0;
+      margin: 0;
+      border: 1px solid transparent;
+      border-radius: inherit;
+      background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21.005" height="20.996" viewBox="0 0 21.005 20.996"><g id="Interaktionsgruppe" transform="translate(-1838.995 -99.004)"><g id="Lupe" transform="translate(1838.995 99.004)"><path id="Pfad" d="M.373,0A.369.369,0,0,0,0,.374L.017,2.106a.387.387,0,0,0,.38.381l9.831.1a.369.369,0,0,0,.373-.374L10.583.479A.388.388,0,0,0,10.2.1" transform="translate(13.51 11.674) rotate(45)"/><g id="Ellipse" transform="translate(16) rotate(90)" fill="none" stroke="%23000" stroke-width="2.51"><circle cx="8" cy="8" r="8" stroke="none"/><circle cx="8" cy="8" r="6.745" fill="none"/></g></g></g></svg>') no-repeat center;
+      cursor: pointer;
+      opacity: 0.7;
+      position: absolute;
+      top: 1.2rem;
+      right: 1rem;
+    }
+  }
+}
+#block-hervorgehobenesformularsuchepage-1 {
+  .form-actions {
+    &>input:first-child {
+      top: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+%zeroPadding {
+  padding: 0;
+}
+@mixin zeroMargin {
+  margin: 0;
+}
+%zeroMargin {
+  @include zeroMargin;
+}
+
+@mixin setPaddingX($space) {
+  padding-left: $space;
+  padding-right: $space;
+}
+@mixin setPaddingY($space) {
+  padding-top: $space;
+  padding-bottom: $space;
+}
+@mixin setMarginX($space) {
+  margin-left: $space;
+  margin-right: $space;
+}
+@mixin setMarginY($space) {
+  margin-top: $space;
+  margin-bottom: $space;
+}

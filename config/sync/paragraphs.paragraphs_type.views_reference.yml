@@ -1,0 +1,10 @@
+uuid: fe0b790b-f5ed-474a-be22-265c069dee74
+langcode: de
+status: true
+dependencies: {  }
+id: views_reference
+label: 'Views Referenz'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

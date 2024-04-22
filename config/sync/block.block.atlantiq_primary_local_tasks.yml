@@ -1,0 +1,22 @@
+uuid: 8df988fd-0a3b-4752-8fda-e2355e772bd7
+langcode: de
+status: true
+dependencies:
+  theme:
+    - atlantiq
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: atlantiq_primary_local_tasks
+theme: atlantiq
+region: highlighted
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primäre Reiter'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

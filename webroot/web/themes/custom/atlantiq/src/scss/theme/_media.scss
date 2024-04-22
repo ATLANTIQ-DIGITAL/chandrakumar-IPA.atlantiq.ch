@@ -1,0 +1,35 @@
+@mixin media($width, $height: auto, $border-radius: 8px) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  border-radius: $border-radius;
+}
+
+.paragraph--type--visual-media {
+  margin-bottom: 60px;
+
+  img {
+    margin-bottom: $spacer * 3;
+    @include media(100%, 270px);
+    @include media-breakpoint-up(sm) {
+      @include media(342px, 270px)
+    }
+  }
+
+  video {
+    margin-bottom: $spacer * 3;
+    @include media(100%, 180px);
+    @include media-breakpoint-up(sm) {
+      @include media(100%, 402px);
+    }
+    @include media-breakpoint-up(md) {
+      @include media(100%, 510px);
+    }
+    @include media-breakpoint-up(lg) {
+      @include media(100%, 558px);
+    }
+    @include media-breakpoint-up(xl) {
+      @include media(100%, 600px);
+    }
+  }
+}

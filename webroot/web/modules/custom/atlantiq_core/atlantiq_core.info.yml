@@ -1,0 +1,5 @@
+name: 'atlantiq_core'
+type: module
+description: 'Functions and configs for the ATLATNIQ Core'
+package: Custom
+core_version_requirement: ^10

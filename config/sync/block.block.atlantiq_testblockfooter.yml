@@ -1,0 +1,25 @@
+uuid: 7a80b8d6-f990-4ba0-9a95-11fe0e98b38c
+langcode: de
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:65941ba3-162e-4d9c-9869-7455c34ef70f'
+  module:
+    - block_content
+  theme:
+    - atlantiq
+id: atlantiq_testblockfooter
+theme: atlantiq
+region: footer
+weight: -5
+provider: null
+plugin: 'block_content:65941ba3-162e-4d9c-9869-7455c34ef70f'
+settings:
+  id: 'block_content:65941ba3-162e-4d9c-9869-7455c34ef70f'
+  label: 'Testblock Footer'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

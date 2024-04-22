@@ -1,0 +1,13 @@
+uuid: ec4e7650-556a-4c6e-91ad-93e73ebc2598
+langcode: de
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: C7X8h9FWlwkQ9y5mnU2JzgaZICAdc6HFbPVbhvjlAYE
+id: node_unpublish_action
+label: 'Inhalt archivieren'
+type: node
+plugin: 'entity:unpublish_action:node'
+configuration: {  }

@@ -1,0 +1,10 @@
+uuid: a18c3fa2-56a9-4ad1-ba16-ab7dfa30cac0
+langcode: de
+status: true
+dependencies: {  }
+id: images
+label: Bilder
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

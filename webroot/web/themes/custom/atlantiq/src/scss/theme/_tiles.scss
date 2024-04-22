@@ -1,0 +1,123 @@
+%tileSet {
+  width: 158px;
+  height: 120px;
+  border-radius: 8px;
+  @include media-breakpoint-up(sm) {
+    width: 100%;
+    height: calc((100vw - 60px) * 12 / 34);
+  }
+  @include media-breakpoint-between(md, xl) {
+    height: calc((100vw - 60px) * 12 / 51);
+  }
+  @include media-breakpoint-up($tilesBreakpoint) {
+    width: 252px;
+    height: 168px;
+  }
+}
+.paragraph--type--tiles {
+  margin-bottom: 42px;
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 48px;
+  }
+}
+
+.paragraph--type--tiles > a:first-child > div > .paragraph--type--kachel-element,
+.paragraph--type--tiles > div:last-child > a:first-child > div > .paragraph--type--kachel-element {
+  @include media-breakpoint-down($tilesBreakpoint) {
+    flex-direction: row-reverse !important;
+    justify-content: flex-end;
+  }
+}
+
+.paragraph--type--tiles > a:first-child > div > .paragraph--type--kachel-element,
+.paragraph--type--tiles > a:nth-child(2) > div > .paragraph--type--kachel-element {
+  @include media-breakpoint-up($tilesBreakpoint) {
+    flex-direction: row-reverse !important;
+  }
+}
+
+.paragraph--type--tiles > a:nth-child(2) > div {
+  margin-top: 12px;
+  @include media-breakpoint-between(sm, xl) {
+    margin-top: 18px;
+  }
+  @include media-breakpoint-up($tilesBreakpoint) {
+    margin-top: 0;
+    flex-direction: row-reverse;
+  }
+}
+
+.paragraph--type--tiles > div:nth-child(3) {
+  width: 100%;
+  margin-top: 12px;
+  @include media-breakpoint-up(sm) {
+    margin-top: 18px;
+  }
+}
+
+.paragraph--type--tiles > div:nth-child(3) > div:last-child {
+  margin-top: 12px;
+  @include media-breakpoint-between(sm, xl) {
+    margin-top: 18px;
+  }
+  @include media-breakpoint-up($tilesBreakpoint) {
+    margin-top: 0;
+  }
+}
+
+.paragraph--type--tiles {
+  .row {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .paragraph--type--kachel-element {
+    column-gap: 12px;
+    @include media-breakpoint-up(sm) {
+      column-gap: 18px;
+    }
+
+    img {
+      @extend %tileSet;
+    }
+
+    .tileText {
+      @extend %tileSet;
+      padding: 8px 12px;
+      background-color: $beige;
+      display: flex;
+      align-items: end;
+      @include media-breakpoint-between(sm, md) {
+        padding: 12px 18px;
+      }
+      @include media-breakpoint-between(md, xl) {
+        padding: 12px 18px;
+      }
+      @include media-breakpoint-up($tilesBreakpoint) {
+        padding: 12px 18px;
+      }
+    }
+
+  }
+
+  .paragraph--type--kachel-element > div:first-child,
+  .paragraph--type--kachel-element .tileText {
+    @include media-breakpoint-up(sm) {
+      flex: 1 1 50%;
+      max-width: 50%;
+    }
+    @include media-breakpoint-between(md, xl) {
+      flex: 1;
+      max-width: 33%;
+    }
+    @include media-breakpoint-up($tilesBreakpoint) {
+      flex: auto;
+    }
+  }
+
+  a:hover .tileText {
+    background: white;
+    border: 1px solid black;
+    color: black;
+  }
+}

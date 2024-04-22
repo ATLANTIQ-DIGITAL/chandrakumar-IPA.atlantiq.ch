@@ -1,0 +1,14 @@
+{
+  "name": "atlantiq",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "scss": "node-sass — watch scss -o css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  }
+}

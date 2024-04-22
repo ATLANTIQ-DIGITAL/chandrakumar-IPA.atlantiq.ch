@@ -1,0 +1,16 @@
+uuid: 96c0d746-8967-4a35-bed3-5866a85a2722
+langcode: de
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6Qope5wG7HUpV0tPOBMtDI_GZkHFcF1Xj4hgD9Cu_hM
+id: image
+label: Bild
+description: 'Lokale Bilder für wiederverwendbare Medien verwenden.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

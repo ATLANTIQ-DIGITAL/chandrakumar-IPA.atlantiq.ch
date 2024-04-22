@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% set type = attributes.storage().type.__toString() %}
+{%
+  set textual_inputs = [
+    'text',
+    'password',
+    'datetime',
+    'datetime-local',
+    'date',
+    'month',
+    'time',
+    'week',
+    'number',
+    'email',
+    'url',
+    'search',
+    'tel',
+    'color',
+    'multiple',
+    'size',
+  ]
+%}
+{%
+  set submit_inputs = [
+    'submit',
+  ]
+%}
+{%
+  set check_inputs = [
+    'checkbox',
+  ]
+%}
+{% if type in textual_inputs %}
+  {%
+    set textual_inputs_classes = [
+      'form-control',
+    ]
+  %}
+  {% if attributes.placeholder %}
+    <input{{ attributes.addClass(textual_inputs_classes) }} />{{ children }}
+  {% else %}
+    <input{{ attributes.addClass(textual_inputs_classes).setAttribute('placeholder', ' ') }} />{{ children }}
+  {% endif %}
+{% elseif type in submit_inputs %}
+  {%
+    set submit_inputs_classes = [
+      'btn',
+      'btn-primary',
+    ]
+  %}
+  <input{{ attributes.addClass(submit_inputs_classes) }} />{{ children }}
+{% elseif type in check_inputs %}
+  {%
+    set check_inputs_classes = [
+      'form-check-input',
+    ]
+  %}
+  <input{{ attributes.addClass(check_inputs_classes) }} />{{ children }}
+
+  {#<label>#}
+    {#<input{{ attributes }} />{{ children }}#}
+    {#<span class="c-indicator"></span>#}
+    {#Check this custom checkbox#}
+  {#</label>#}
+{% else %}
+  <input{{ attributes }} />{{ children }}
+{% endif %}

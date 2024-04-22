@@ -1,0 +1,22 @@
+uuid: fa9c092a-6ee2-4d6c-aa41-51ea3a8f4880
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_extern.field_video_extern
+    - paragraphs.paragraphs_type.video_extern
+id: paragraph.video_extern.default
+targetEntityType: paragraph
+bundle: video_extern
+mode: default
+content:
+  field_video_extern:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

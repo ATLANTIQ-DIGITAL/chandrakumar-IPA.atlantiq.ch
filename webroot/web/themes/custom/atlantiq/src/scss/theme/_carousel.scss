@@ -1,0 +1,231 @@
+.slick__arrow {
+  @include media-breakpoint-up(sm) {
+    width: 23%;
+    left: auto;
+    right: 0;
+  }
+  bottom: 50px;
+  top: auto;
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  .slick-prev {
+    @include media-breakpoint-up(sm) {
+      left: -12px;
+    }
+    left: -6px;
+  }
+
+  .slick-next {
+    right: -6px;
+  }
+
+}
+
+.slick-arrow::before {
+  content: '';
+}
+
+/************************************ Small Slider ************************************/
+.ATLANTIQ_slickSliderSmall {
+
+  ul {
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+    grid-template-columns: repeat(1, 1fr) !important;
+    height: 332px;
+    margin-bottom: 80px !important;
+
+    li {
+      height: 332px;
+
+      .grid__content {
+        @include media-breakpoint-down(480px) {
+          height: 332px;
+        }
+        border: 1px solid black;
+        border-radius: 8px;
+
+        .slide__media {
+          width: calc(100% - 36px);
+          height: 196px;
+          margin-top: 18px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 8px;
+        }
+
+        .slide__caption {
+          font-family: 'Miriam Libre';
+          font-size: 20px;
+          line-height: 28px;
+          padding: 18px;
+        }
+
+      }
+
+    }
+
+    li:before {
+      content: '';
+      margin: 0;
+    }
+
+  }
+
+}
+
+/************************************ Middle Slider ************************************/
+.ATLANTIQ_slickSliderMiddle {
+
+  ul {
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+    grid-template-columns: repeat(1, 1fr) !important;
+    height: 312px;
+    margin-bottom: 80px !important;
+
+    li {
+      height: 312px;
+
+      .grid__content {
+        @include media-breakpoint-down(480px) {
+          height: 312px;
+        }
+
+        .slide__media {
+          width: 100%;
+          height: 270px;
+          border-radius: 8px;
+        }
+
+        .slide__caption {
+          font-size: 18px;
+          line-height: 24px;
+          padding: 18px 0 0 0;
+        }
+
+      }
+
+    }
+
+    li:before {
+      content: '';
+      margin: 0;
+    }
+
+  }
+
+}
+
+/************************************ Big Slider ************************************/
+.carousel-caption {
+  position: relative;
+  color: black;
+  text-align: left;
+  right: auto;
+  left: auto;
+}
+.carousel-navigation {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  height: 50px;
+}
+
+.ATLANTIQ_bootstrapSliderBig {
+  .carousel-inner {
+    @include media-breakpoint-up(sm) {
+      height: 674px;
+    }
+    height: 526px;
+  }
+  .carousel-item {
+    @include media-breakpoint-up(sm) {
+      height: 674px;
+    }
+    height: 576px;
+    border-radius: 8px;
+
+    a {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+      }
+      @include media-breakpoint-up(sm) {
+        height: 600px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    .carousel-caption {
+      background-color: white;
+      border: 1px solid black;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      width: 100%;
+      bottom: 30px;
+      height: 176px;
+      padding: 30px 30px 0 30px;
+      margin-bottom: 44px;
+      @include media-breakpoint-up(sm) {
+        position: absolute;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 0;
+        width: 432px;
+        max-width: 100%;
+        height: auto;
+        max-height: 176px;
+        bottom: 30px;
+        right: 0;
+        padding: 30px 30px 24px 30px;
+      }
+    }
+
+  }
+
+  .row {
+    .position-relative {
+      bottom: -12px;
+      @include media-breakpoint-up(sm) {
+        right: 18px;
+      }
+    }
+
+    .carousel-control-prev {
+      @include media-breakpoint-down(sm) {
+        left: -9px;
+      }
+    }
+    .carousel-control-next {
+      @include media-breakpoint-down(sm) {
+        right: -9px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,74 @@
+%references {
+  border-top: 1px solid black;
+  .views-field {
+    padding-top: 18px;
+    padding-bottom: 12px;
+}
+}
+.reference-vereine {
+  @extend %references;
+  svg {
+    margin-right: 8px;
+    transition: margin-right ease 300ms;
+  }
+  h3:hover {
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+.reference-gewerbe {
+  @extend %references;
+  svg {
+    margin-right: 8px;
+    transition: margin-right ease 300ms;
+  }
+  h3:hover {
+    svg {
+      margin-right: 0;
+    }
+  }
+}
+
+#block-views-block-uebersicht-veranstaltungen-block-1-2 {
+  footer {
+    padding-top: 30px;
+
+    .btn {
+      border-radius: 8px;
+      border: 1px solid black;
+      background-color: white;
+      margin-bottom: 60px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-family: "Miriam Libre", sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+    }
+    .btn:hover {
+      background-color: rgba(1,1,1,0.05);
+    }
+  }
+}
+
+.reference-veranstaltungen {
+  .innerWrapper {
+    border-top: 1px solid black;
+    padding-top: 18px;
+  }
+  h3 {
+    margin-bottom: 6px;
+  }
+  .event-details {
+    margin-bottom: 36px;
+  }
+  .event-date-time {
+    font-family: $cormorant;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 18px;
+  }
+  .event-date {
+    margin-right: 18px;
+  }
+}

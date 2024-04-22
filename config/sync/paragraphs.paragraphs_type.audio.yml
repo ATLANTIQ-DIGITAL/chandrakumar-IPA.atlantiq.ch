@@ -1,0 +1,10 @@
+uuid: c6b5e0fe-d5c6-45b8-a3f9-7e3d734a351b
+langcode: de
+status: true
+dependencies: {  }
+id: audio
+label: Audio
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

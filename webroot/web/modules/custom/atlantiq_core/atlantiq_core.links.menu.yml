@@ -1,0 +1,5 @@
+atlantiq_core.config:
+  title: ATLANTIQ Core Config
+  parent: system.admin_config_system
+  route_name: atlantiq_core.config
+  weight: 10

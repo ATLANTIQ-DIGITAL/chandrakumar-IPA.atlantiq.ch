@@ -1,0 +1,50 @@
+.hero-region {
+  margin-top: 78px;
+  .views-field-field-bannerbild {
+    img {
+      width: 100%;
+      height: 510px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+ /* //scroll effekt (content.scss margin wieder einblenden)//
+  .views-field-field-bannerbild {
+    position: fixed;
+    width: 100%; 93%;
+    height: 100%;
+    z-index: -1;
+  }
+  .views-field-field-bannerbild img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+*/
+  @media (max-width: 575px) {
+  .views-field-field-bannerbild img {
+    height: 336px;
+  }
+}
+  @media (min-width: 576px) and (max-width: 767px) {
+    .views-field-field-bannerbild img {
+      height: 300px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .views-field-field-bannerbild img {
+      height: 310px;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .views-field-field-bannerbild img {
+      height: 340px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .views-field-field-bannerbild img {
+      //
+    }
+  }
+}
+

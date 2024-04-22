@@ -1,0 +1,9 @@
+.paragraph--type--addition {
+  border-top: 1px solid $black;
+  .d-flex {
+    gap: 8px;
+  }
+  .d-flex + div {
+    padding-left: 32px;
+  }
+}

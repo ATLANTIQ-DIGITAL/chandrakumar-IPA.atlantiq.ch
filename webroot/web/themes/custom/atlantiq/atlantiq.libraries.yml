@@ -1,0 +1,21 @@
+bootstrap:
+  remote: https://github.com/twbs/bootstrap
+  version: "5.3.0"
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap
+    gpl-compatible: true
+  js:
+    dist/js/bootstrap.bundle.js: { }
+
+atlantiq:
+  version: 1.0.0
+  css:
+    theme:
+      dist/css/theme.css: { minified: true }
+#  js:
+#    src/js/theme.js: { }
+  dependencies:
+    - core/drupal
+    - core/once
+    - atlantiq/bootstrap

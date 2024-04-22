@@ -1,0 +1,21 @@
+uuid: 83c8a716-881c-4d85-ac05-851931005e1a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_breiteres_element
+    - paragraphs.paragraphs_type.spaltenabschnitt
+  module:
+    - options
+id: paragraph.spaltenabschnitt.field_breiteres_element
+field_name: field_breiteres_element
+entity_type: paragraph
+bundle: spaltenabschnitt
+label: 'Breiteres Element (für 2 Elemente)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

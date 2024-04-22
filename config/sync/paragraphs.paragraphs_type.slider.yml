@@ -1,0 +1,10 @@
+uuid: 4ec93f5a-9d4f-4922-b8a3-523763a7bf06
+langcode: de
+status: true
+dependencies: {  }
+id: slider
+label: Slider
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

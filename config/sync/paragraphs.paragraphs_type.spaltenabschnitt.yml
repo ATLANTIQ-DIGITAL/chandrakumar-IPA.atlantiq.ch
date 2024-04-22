@@ -1,0 +1,10 @@
+uuid: 3371d6d8-ab0e-4e57-a69b-735d1788c831
+langcode: de
+status: true
+dependencies: {  }
+id: spaltenabschnitt
+label: Spaltenabschnitt
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

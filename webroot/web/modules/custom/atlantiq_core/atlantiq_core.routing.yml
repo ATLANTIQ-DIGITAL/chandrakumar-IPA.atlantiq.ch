@@ -1,0 +1,7 @@
+atlantiq_core.config:
+  path: '/admin/config/system/atlantiq-core'
+  defaults:
+    _title: 'ATLANTIQ Core Config'
+    _form: 'Drupal\atlantiq_core\Form\ConfigForm'
+  requirements:
+    _permission: 'administer site configuration'

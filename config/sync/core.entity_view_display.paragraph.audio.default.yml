@@ -1,0 +1,22 @@
+uuid: 664608aa-18b3-410e-8664-057328c38f2e
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audio.field_audio
+    - paragraphs.paragraphs_type.audio
+id: paragraph.audio.default
+targetEntityType: paragraph
+bundle: audio
+mode: default
+content:
+  field_audio:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

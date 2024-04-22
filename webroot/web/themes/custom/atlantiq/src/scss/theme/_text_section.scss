@@ -1,0 +1,44 @@
+.leadtext + div > div:first-child > .paragraph--type--textabschnitt {
+  margin-top: -24px;
+}
+
+.paragraph--type--textabschnitt {
+  table {
+    width: 100%;
+    vertical-align: top;
+    hyphens: auto;
+    background-color: rgba(220,220,210,0.3);
+    margin-bottom: 60px;
+    thead {
+      tr {
+        border-bottom: 1px solid black;
+        th {
+          width: 33%;
+          border-left: 1px solid black;
+          padding: 12px;
+        }
+        th:first-child {
+          width: auto;
+          border: none;
+          background-color: white;
+          padding: 12px 12px 12px 0;
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid black;
+        th:first-child {
+          background-color: white;
+          padding: 12px 12px 12px 0;
+          font-weight: 300;
+        }
+        td {
+          border-left: 1px solid black;
+          padding: 12px;
+
+        }
+      }
+    }
+  }
+}

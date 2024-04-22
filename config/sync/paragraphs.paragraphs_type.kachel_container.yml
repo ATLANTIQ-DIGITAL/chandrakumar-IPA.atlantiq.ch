@@ -1,0 +1,10 @@
+uuid: a441c8f2-275a-4889-9f61-ec7bcff0c302
+langcode: de
+status: true
+dependencies: {  }
+id: kachel_container
+label: 'Kachel Container'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

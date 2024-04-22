@@ -1,0 +1,10 @@
+uuid: 94a83aaa-cad0-4a04-b92a-1556a1909f7c
+langcode: de
+status: true
+dependencies: {  }
+id: accordion_container
+label: 'Akkordeon Container'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

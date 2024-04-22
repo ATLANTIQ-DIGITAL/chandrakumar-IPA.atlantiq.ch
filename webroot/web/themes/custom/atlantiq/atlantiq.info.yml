@@ -1,0 +1,21 @@
+name: ATLANTIQ
+type: theme
+base theme: false
+description: 'Haupttheme auf Basis des Atlantiq-Themes'
+package: Custom
+core_version_requirement: ^10
+
+screenshot: og-atlantiq.png
+
+libraries:
+  - atlantiq/atlantiq
+
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  highlighted: 'Highlighted'
+  content_title: 'Content Title'
+  content_top: 'Content top'
+  content: 'Content'
+  content_bottom: 'Content bottom'
+  footer: 'Footer'

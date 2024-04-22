@@ -1,0 +1,22 @@
+uuid: 6e142530-a120-4c3c-8f0c-e356470d4d7a
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.kachel.field_kachelbild
+    - paragraphs.paragraphs_type.kachel
+id: paragraph.kachel.default
+targetEntityType: paragraph
+bundle: kachel
+mode: default
+content:
+  field_kachelbild:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

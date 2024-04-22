@@ -1,0 +1,75 @@
+uuid: e746d3f0-0873-4ab9-abec-b241bd3ccea9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_spalten
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.spaltenabschnitt
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: paragraph.spaltenabschnitt.field_spalten
+field_name: field_spalten
+entity_type: paragraph
+bundle: spaltenabschnitt
+label: Spalten
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+      text: text
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 16
+        enabled: false
+      accordion_container:
+        weight: 17
+        enabled: false
+      audio:
+        weight: 18
+        enabled: false
+      document:
+        weight: 19
+        enabled: false
+      documents:
+        weight: 20
+        enabled: false
+      image:
+        weight: 21
+        enabled: true
+      images:
+        weight: 22
+        enabled: false
+      slider:
+        weight: 23
+        enabled: false
+      spaltenabschnitt:
+        weight: 24
+        enabled: false
+      text:
+        weight: 25
+        enabled: true
+      text_plain:
+        weight: 26
+        enabled: false
+      video_extern:
+        weight: 27
+        enabled: false
+      video_intern:
+        weight: 28
+        enabled: false
+      views_reference:
+        weight: 29
+        enabled: false
+      webform:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

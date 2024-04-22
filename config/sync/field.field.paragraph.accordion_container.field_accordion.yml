@@ -1,0 +1,61 @@
+uuid: 2aeaf6ef-8049-457b-944c-82030287d395
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.accordion_container
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_container.field_accordion
+field_name: field_accordion
+entity_type: paragraph
+bundle: accordion_container
+label: Akkordeon
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 12
+        enabled: true
+      accordion_container:
+        weight: 13
+        enabled: false
+      audio:
+        weight: 14
+        enabled: false
+      document:
+        weight: 15
+        enabled: false
+      documents:
+        weight: 16
+        enabled: false
+      image:
+        weight: 17
+        enabled: false
+      images:
+        weight: 18
+        enabled: false
+      text:
+        weight: 19
+        enabled: false
+      text_plain:
+        weight: 20
+        enabled: false
+      video_extern:
+        weight: 21
+        enabled: false
+      video_intern:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

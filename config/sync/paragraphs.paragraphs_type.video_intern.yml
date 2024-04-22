@@ -1,0 +1,10 @@
+uuid: c707da59-f727-4640-a9b2-efa10b7bd487
+langcode: de
+status: true
+dependencies: {  }
+id: video_intern
+label: 'Video (intern)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
