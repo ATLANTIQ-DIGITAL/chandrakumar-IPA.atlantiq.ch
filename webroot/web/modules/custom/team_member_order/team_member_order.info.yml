@@ -1,0 +1,7 @@
+name: Team Member Order
+type: module
+description: 'Ermöglicht es Ihnen, die Reihenfolge der Teammitglieder zu ändern.'
+package: Custom
+core_version_requirement: ^10
+dependencies:
+  - drupal:views
