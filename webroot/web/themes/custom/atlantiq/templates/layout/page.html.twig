@@ -49,11 +49,11 @@
 
   <header>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+    <div class="d-flex justify-content-center">
+      <a class="navbar-brand" href="{{ path('<front>') }}"><img src="{{ '/' ~ active_theme_path() ~ '/img/logo/ATLANTIQ_Logo_RZ.svg' }}" alt="Logo Atlantiq" class="img-fluid logo" id="logo-atlantiq"></a>
+    </div>
+    <nav class="container navbar navbar-expand-xl fixed-top">
       <div class="container-fluid">
-        <div class="me-auto">
-          <a class="navbar-brand" href="{{ path('<front>') }}"><img src="{{ '/' ~ active_theme_path() ~ '/img/logo/logo-atlantiq.png' }}" alt="Logo Atlantiq" class="img-fluid logo"></a>
-        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAtlantiq" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
