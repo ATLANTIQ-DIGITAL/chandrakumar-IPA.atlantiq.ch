@@ -1,0 +1,22 @@
+{#
+@file
+Theme implementation for a paragraph type with background image, title, and description fields.
+#}
+
+{% set background_image = file_url(paragraph.field_hintergrundbild_block.entity.fileuri) %}
+{% set title_color = paragraph.field_titelfarbe.value %}
+{% set description_color = paragraph.field_beschreibungstextfarbe.value %}
+{% set title_text = paragraph.field_titelbeschriftung_block.value %}
+{% set description_text = paragraph.field_beschreibungstext_rechts.value %}
+
+{% if paragraph.field_hintergrundbild_block.entity %}
+  {% set background_image = file_url(paragraph.field_hintergrundbild_block.entity.fileuri) %}
+<div class="paragraph-block-container">
+<div{{ attributes.addClass('paragraph', 'paragraph--type--' ~ paragraph.bundle|clean_class) }} style="background-image: url('{{ background_image }}'); height: 100vh; background-size: cover; background-repeat: no-repeat; background-position: center;">
+  {% else %}
+  <div{{ attributes.addClass('paragraph', 'paragraph--type--' ~ paragraph.bundle|clean_class) }} style="padding: 20px;">
+    {% endif %}
+    <h2 style="color: {{ title_color }};">{{ title_text }}</h2>
+    <p style="color: {{ description_color }};">{{ description_text }}</p>
+  </div>
+</div>

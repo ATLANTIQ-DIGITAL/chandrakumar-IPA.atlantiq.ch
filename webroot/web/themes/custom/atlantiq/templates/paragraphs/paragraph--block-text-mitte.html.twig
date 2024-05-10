@@ -1,0 +1,16 @@
+{#
+@file
+Theme implementation for a paragraph type with a title and description.
+#}
+
+<div{{ attributes.addClass('paragraph', 'paragraph--type--block-text-mitte') }}>
+  {% if content.field_titelbeschriftung_mitte %}
+    <h1>{{ content.field_titelbeschriftung_mitte }}</h1>
+  {% endif %}
+
+  {% if content.field_beschreibungstext_mitte %}
+    <div class="description">
+      {{ content.field_beschreibungstext_mitte }}
+    </div>
+  {% endif %}
+</div>
