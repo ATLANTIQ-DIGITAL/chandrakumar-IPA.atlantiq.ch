@@ -1,0 +1,8 @@
+drag_and_drop:
+  version: 1.x
+  js:
+    src/js/team_manager_drag_and_drop.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

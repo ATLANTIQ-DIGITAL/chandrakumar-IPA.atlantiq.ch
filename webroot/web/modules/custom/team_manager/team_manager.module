@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\Core\Render\BubbleableMetadata;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function team_manager_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_page_form' || $form_id == 'node_page_edit_form') {
+    $form['#attached']['library'][] = 'team_manager/drag_and_drop';
+  }
+}

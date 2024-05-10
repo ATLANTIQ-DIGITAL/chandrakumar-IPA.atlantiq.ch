@@ -1,0 +1,7 @@
+team_manager.update_weights:
+  path: '/team-manager/update-weights'
+  defaults:
+    _controller: '\Drupal\team_manager\Controller\TeamManagerController::updateWeights'
+    _title: 'Update Weights'
+  requirements:
+    _permission: 'access content'
