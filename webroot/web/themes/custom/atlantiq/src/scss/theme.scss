@@ -59,10 +59,10 @@
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
 // 5. Add additional custom code here
-@import "mixins";
 @import "base/fonts";
 @import "layout/layout";
 @import "layout/footer";
+@import "layout/nav";
 @import "theme/form";
 @import "theme/menu_main";
 

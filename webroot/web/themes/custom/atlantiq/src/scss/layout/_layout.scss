@@ -10,3 +10,76 @@ main > .container {
 .paragraph .paragraph {
   margin-bottom: 1rem;
 }
+.paragraph--type--slider .field__item img{
+  width: 100%;
+}
+
+//Mitarbeiter
+// Basis-Styles
+$font-family: 'Helvetica', 'Arial', sans-serif;
+$primary-color: #333;
+$secondary-color: #f0f0f0;
+$base-font-size: 16px;
+$spacing-unit: 20px;
+
+body {
+  font-family: $font-family;
+  color: $primary-color;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Vollbild-Ansicht für jede Profilkarte
+.views-element-container {
+  .person-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: $spacing-unit;
+    background-color: $secondary-color;
+    box-sizing: border-box;
+
+    // Für responsive Layouts
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    // Individualisierung der inneren Felder
+    .views-field {
+      margin: 10px 0;
+
+      &-name {
+        font-size: 2em;
+        font-weight: bold;
+      }
+
+      &-position,
+      &-abteilung {
+        font-size: 1.2em;
+        color: darken($primary-color, 10%);
+      }
+
+      &-personenbild {
+        width: 100%; // Responsive Bilder
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+
+      &-personentelefonnummer,
+      &-personen-email {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+

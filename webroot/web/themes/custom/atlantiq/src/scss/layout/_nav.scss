@@ -1,98 +1,10 @@
-header {
-  position: fixed;
-  z-index: 10;
-  img {
-    @include media-breakpoint-down(xl) {
-      height: 42px;
-    }
-    @include media-breakpoint-up(xl) {
-      height: 60px;
-    }
-  }
-}
-.navbar-toggler {
-  border: none;
-  padding-right: 2px;
-  &:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-  }
-}
-.navbar {
+#logo-atlantiq {
   z-index: 100;
-  padding: 24px 0 15px 0;
-  @include media-breakpoint-up(xl) {
-    padding: 60px 0 15px 0;
-  }
-  .container-fluid {
-    padding: 0 24px;
-    @include media-breakpoint-up(xl) {
-      padding: 0 60px;
-    }
-  }
-  nav>ul>li>.nav-link {
-    padding: .25rem;
-    line-height: 17px;
-    &:after {
-      display:block;
-      content: '';
-      border: none !important;
-      border-bottom: 3px solid $green !important;
-      margin-left: 0 !important;
-      transform: scaleX(0);
-      transition: transform 250ms ease-in-out;
-      transform-origin:  0% 50%;
-    }
-    &:focus {
-      &:after {
-        transform:scaleX(1);
-      }
-    }
-  }
-  @include media-breakpoint-up(xl) {
-    nav>ul>li>.nav-link {
-      &:hover{
-        &:after {
-          transform:scaleX(1);
-        }
-      }
-    }
-  }
-  nav>ul>li>ul>li {
-    position: relative;
-  }
-  nav>ul>li>ul>li>.nav-link {
-    @include media-breakpoint-up(xl) {
-      transition: padding-right 0.3s ease-in-out;
-      &:after {
-        display: inline-block;
-        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 30 20"><g id="Gruppe_298" data-name="Gruppe 298" transform="translate(0 0)"><path id="Pfad_36" data-name="Pfad 36" d="M29.891,9.737,20.264.109a.372.372,0,0,0-.526,0L18.487,1.36a.372.372,0,0,0,0,.526l6.857,6.858H.38A.381.381,0,0,0,0,9.125v1.749a.381.381,0,0,0,.38.382H25.344l-6.857,6.857a.372.372,0,0,0,0,.526l1.251,1.251a.372.372,0,0,0,.526,0l9.627-9.628a.372.372,0,0,0,0-.526" transform="translate(0 0)"/></g></svg>');
-        width: 16px;
-        height: 16px;
-        transition: opacity 0.3s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        right: 28px;
-        margin-top: -2px;
-      }
-      &:hover, &:focus {
-        padding-right: 40px;
-        &:after {
-          opacity: 1;
-          //width: 16px;
-        }
-      }
-    }
-  }
-  nav {
-    ul {
-      .nav-item {
-        @include setPaddingX(12px);
-        a {
-          color: $black;
-        }
-      }
-    }
-  }
+  position: absolute;
+}
+#block-atlantiq-footeroben{
+  z-index: 1;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
 }
