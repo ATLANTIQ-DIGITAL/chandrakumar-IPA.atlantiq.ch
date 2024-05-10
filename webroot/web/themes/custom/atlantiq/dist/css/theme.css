@@ -1,4 +1,29 @@
 @charset "UTF-8";
+/*
+// Farben
+$color-primary: #556cd6;
+$color-secondary: #198754;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
+
+// Typografie
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Abstände
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 30px;
+*/
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11562,6 +11587,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 main > .container {
   padding: 70px 15px 25px 30px;
 }
@@ -11582,6 +11618,54 @@ main > .container {
   width: 100%;
 }
 
+.stellen-container {
+  background-color: #FFFF00;
+}
+
+.paragraph-block-container,
+.kunde-container,
+.person-container,
+.stellen-container,
+.paragraph--type--block-text-mitte {
+  height: 100vh;
+  width: 100vw;
+  margin: 56px 0 56px 0;
+}
+
+.stellen-container,
+.kunde-container,
+.datenschutz,
+.impressum {
+  padding-top: 16vh;
+  padding-bottom: 20vh;
+}
+
+.stellen-container,
+.datenschutz,
+.impressum {
+  padding-right: 25vw;
+  padding-left: 33vw;
+}
+
+.paragraph--type--block-text-mitte {
+  display: flex;
+  align-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  padding-left: 33vw;
+  padding-right: 33vw;
+  background-color: #F1f1f1;
+}
+
+.paragraph--type--spaltenabschnitt {
+  padding: 16vh 10vw 16vh 25vw;
+}
+
+.kunde-container {
+  padding-left: 33vw;
+  padding-right: 33vw;
+}
+
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #333;
@@ -11599,8 +11683,6 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 20px;
-  background-color: #f0f0f0;
-  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .views-element-container .person-container {
@@ -11631,8 +11713,10 @@ body {
 }
 
 #logo-atlantiq {
-  z-index: 100;
+  z-index: 1031;
   position: absolute;
+  width: 200px;
+  height: 45px;
 }
 
 #block-atlantiq-footeroben {
@@ -11663,6 +11747,11 @@ body {
 
 #block-hervorgehobenesformularsuchepage-1 .form-actions > input:first-child {
   top: 1.1rem;
+}
+
+.datenschutz {
+  height: 561px;
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=theme.css.map */

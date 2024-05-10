@@ -22,6 +22,72 @@ $secondary-color: #f0f0f0;
 $base-font-size: 16px;
 $spacing-unit: 20px;
 
+//Layout Block
+$container-height: 100vh;
+$container-width: 100vw;
+$yellow-background: #FFFF00;
+$light-grey-background: #F1f1f1;
+$container-margin: 56px 0 56px 0;
+$container-padding-right-1: 25vw;
+$container-padding-right-2: 33vw;
+$container-padding-left-1: 33vw;
+$container-padding-top-1: 16vh;
+$container-padding-bottom-1: 20vh;
+$spalten-container-padding: 16vh 10vw 16vh 25vw;
+
+.stellen-container{
+  background-color: $yellow-background;
+}
+
+
+.paragraph-block-container,
+.kunde-container,
+.person-container,
+.stellen-container,
+.paragraph--type--block-text-mitte{
+  height: $container-height;
+  width: $container-width;
+  margin: $container-margin;
+}
+
+//padding height1
+.stellen-container,
+.kunde-container,
+.datenschutz,
+.impressum{
+  padding-top: $container-padding-top-1;
+  padding-bottom: $container-padding-bottom-1;
+}
+//padding width1
+.stellen-container,
+.datenschutz,
+.impressum{
+  padding-right: $container-padding-right-1;
+  padding-left: $container-padding-left-1;
+}
+
+//Paragraph text mitte
+.paragraph--type--block-text-mitte{
+  display: flex;
+  align-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  padding-left: $container-padding-left-1;
+  padding-right: $container-padding-right-2;
+  background-color: $light-grey-background;
+}
+
+//Paragraph Spaltenabschnitt
+.paragraph--type--spaltenabschnitt{
+  padding: $spalten-container-padding;
+}
+
+//Kunde Container Breite
+.kunde-container{
+  padding-left: $container-padding-left-1;
+  padding-right: $container-padding-right-2;
+}
+
 body {
   font-family: $font-family;
   color: $primary-color;
@@ -41,8 +107,6 @@ body {
     width: 100%;
     min-height: 100vh;
     padding: $spacing-unit;
-    background-color: $secondary-color;
-    box-sizing: border-box;
 
     // Für responsive Layouts
     @media (min-width: 768px) {
@@ -81,5 +145,7 @@ body {
     }
   }
 }
+
+
 
 
