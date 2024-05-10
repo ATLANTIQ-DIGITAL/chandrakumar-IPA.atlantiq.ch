@@ -1,4 +1,6 @@
 AddHandler application/x-httpd-php81 .php
+AddType application/javascript .js
+
 
 #
 # Apache/PHP/Drupal settings:
@@ -61,6 +63,10 @@ AddEncoding gzip svgz
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
+
+  # Neue Rewrite-Regel zum Umleiten von HTTP auf HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
