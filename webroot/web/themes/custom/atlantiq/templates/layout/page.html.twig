@@ -54,7 +54,7 @@
     </div>
     <nav class="container navbar navbar-expand-xl fixed-top">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAtlantiq" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAtlantiq" aria-controls="navbarAtlantiq" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -85,17 +85,15 @@
           {{ page.content_top }}
         </aside>
       {% endif %}
-      <main class="page-content-main">
+      <div class="page-content-main">
         <a id="main-content" tabindex="-1"></a>
         {{ page.content }}
-      </main>
+      </div>
       {% if page.content_bottom %}
         <aside class="page-content-bottom">
           {{ page.content_bottom }}
         </aside>
       {% endif %}
-
-
   </main>
 
   <footer class="footer mt-auto py-3 bg-body-tertiary">
