@@ -1,4 +1,23 @@
-.datenschutz {
+$container-scroll-margin: 0 25vw 0 33vw;
+.datenschutz-container {
   height: 561px;
   overflow-y: scroll;
+  margin: $container-scroll-margin;
 }
+
+/* Stil für die Scrollbar selbst */
+.datenschutz-container::-webkit-scrollbar {
+  width: 12px; /* Breite der Scrollbar */
+}
+
+/* Stil für das Handle */
+.datenschutz-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey; /* Farbe des Scrollbar-Handles */
+  border-radius: 10px; /* Rundung der Ecken des Handles */
+}
+
+/* Stil für die Bahn der Scrollbar */
+.datenschutz-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Farbe des Scrollbar-Tracks */
+}
+

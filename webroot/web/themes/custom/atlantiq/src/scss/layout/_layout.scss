@@ -1,9 +1,6 @@
 main > .container {
   padding: 70px 15px 25px 30px;
 }
-.logo {
-  max-height: 27px;
-}
 .paragraph {
   margin-bottom: 5rem;
 }
@@ -14,138 +11,49 @@ main > .container {
   width: 100%;
 }
 
-//Mitarbeiter
-// Basis-Styles
-$font-family: 'Helvetica', 'Arial', sans-serif;
-$primary-color: #333;
-$secondary-color: #f0f0f0;
-$base-font-size: 16px;
-$spacing-unit: 20px;
+// Allgemeine Container-Styles
+.stellen-container,
+.kunde-container,
+.person-container,
+.paragraph--type--block-text-mitte,
+.paragraph-text-rechts-oben-container{
+  @include full-size-container;
+}
 
-//Layout Block
-$container-height: 100vh;
-$container-width: 100vw;
-$yellow-background: #FFFF00;
-$light-grey-background: #F1f1f1;
-$container-margin: 56px 0 56px 0;
-$container-padding-right-1: 25vw;
-$container-padding-right-2: 33vw;
-$container-padding-left-1: 33vw;
-$container-padding-top-1: 16vh;
-$container-padding-bottom-1: 20vh;
-$spalten-container-padding: 16vh 10vw 16vh 25vw;
-
-.stellen-container{
+// Spezifischer Hintergrund nur für 'stellen-container'
+.stellen-container {
   background-color: $yellow-background;
 }
 
-
-.paragraph-block-container,
+// Padding-Anpassungen für Kunde-Container, und Impressum
 .kunde-container,
-.person-container,
-.stellen-container,
-.paragraph--type--block-text-mitte{
-  height: $container-height;
-  width: $container-width;
-  margin: $container-margin;
+.impressum-container,
+.stellen-container{
+  padding-top: map-get($container-padding, 'top');
+  padding-bottom: map-get($container-padding, 'bottom');
+  padding-left: map-get($container-padding, 'left-breit');
+  padding-right: map-get($container-padding, 'right-breit');
 }
 
-//padding height1
-.stellen-container,
-.kunde-container,
-.datenschutz,
-.impressum{
-  padding-top: $container-padding-top-1;
-  padding-bottom: $container-padding-bottom-1;
+// Padding-Anpassungen für Block-Text-oben-rechts-Container
+.paragraph-text-rechts-oben-container {
+  @include text-formatting(20px, 10px);
 }
-//padding width1
-.stellen-container,
-.datenschutz,
-.impressum{
-  padding-right: $container-padding-right-1;
-  padding-left: $container-padding-left-1;
-}
-
-//Paragraph text mitte
-.paragraph--type--block-text-mitte{
-  display: flex;
-  align-content: center;
-  text-align: left;
-  flex-wrap: wrap;
-  padding-left: $container-padding-left-1;
-  padding-right: $container-padding-right-2;
+// Padding-Anpassungen für Paragraph mit Block-Text-Mitte
+.paragraph--type--block-text-mitte {
   background-color: $light-grey-background;
+  padding-top: map-get($container-padding, 'top');
+  padding-bottom: map-get($container-padding, 'bottom');
+  padding-left: map-get($container-padding, 'left-breit');
+  padding-right: map-get($container-padding, 'right-breit');
 }
 
-//Paragraph Spaltenabschnitt
-.paragraph--type--spaltenabschnitt{
-  padding: $spalten-container-padding;
+// Padding für Paragraph-Block der den Spalten-Abschnitt darstellt
+.paragraph--type--spaltenabschnitt {
+  padding: map-get($container-padding, 'spalten');
 }
-
-//Kunde Container Breite
-.kunde-container{
-  padding-left: $container-padding-left-1;
-  padding-right: $container-padding-right-2;
+//sonstiges
+.node__meta{
+  display: none;
 }
-
-body {
-  font-family: $font-family;
-  color: $primary-color;
-  font-size: $base-font-size;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// Vollbild-Ansicht für jede Profilkarte
-.views-element-container {
-  .person-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    padding: $spacing-unit;
-
-    // Für responsive Layouts
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-
-    // Individualisierung der inneren Felder
-    .views-field {
-      margin: 10px 0;
-
-      &-name {
-        font-size: 2em;
-        font-weight: bold;
-      }
-
-      &-position,
-      &-abteilung {
-        font-size: 1.2em;
-        color: darken($primary-color, 10%);
-      }
-
-      &-personenbild {
-        width: 100%; // Responsive Bilder
-
-        img {
-          width: 100%;
-          height: auto;
-          display: block;
-        }
-      }
-
-      &-personentelefonnummer,
-      &-personen-email {
-        font-size: 0.9em;
-      }
-    }
-  }
-}
-
-
-
 

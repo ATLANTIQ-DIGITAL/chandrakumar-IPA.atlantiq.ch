@@ -1,0 +1,10 @@
+// Grundlegende Styles, die auf das gesamte Projekt angewendet werden.
+
+body {
+  font-family: $font-family;
+  color: $primary-color;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

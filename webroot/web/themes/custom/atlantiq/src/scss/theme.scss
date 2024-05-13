@@ -60,6 +60,9 @@
 
 // 5. Add additional custom code here
 @import "base/fonts";
+@import "base/mixins";
+@import "base/colors";
+@import "base/base";
 @import "layout/layout";
 @import "layout/footer";
 @import "layout/nav";

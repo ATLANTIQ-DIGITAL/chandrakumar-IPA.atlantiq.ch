@@ -1,29 +1,4 @@
 @charset "UTF-8";
-/*
-// Farben
-$color-primary: #556cd6;
-$color-secondary: #198754;
-$color-light: #f8f9fa;
-$color-dark: #343a40;
-
-// Typografie
-$font-size-base: 16px;
-$font-size-lg: 18px;
-$font-size-sm: 14px;
-
-// Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
-
-// Abstände
-$spacing-xs: 5px;
-$spacing-sm: 10px;
-$spacing-md: 15px;
-$spacing-lg: 20px;
-$spacing-xl: 30px;
-*/
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11598,12 +11573,17 @@ ul {
   margin: 0;
 }
 
-main > .container {
-  padding: 70px 15px 25px 30px;
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  max-height: 27px;
+main > .container {
+  padding: 70px 15px 25px 30px;
 }
 
 .paragraph {
@@ -11618,112 +11598,83 @@ main > .container {
   width: 100%;
 }
 
+.stellen-container,
+.kunde-container,
+.person-container,
+.paragraph--type--block-text-mitte,
+.paragraph-text-rechts-oben-container {
+  width: 100vw;
+  height: 100vh;
+}
+
 .stellen-container {
   background-color: #FFFF00;
 }
 
-.paragraph-block-container,
 .kunde-container,
-.person-container,
-.stellen-container,
-.paragraph--type--block-text-mitte {
-  height: 100vh;
-  width: 100vw;
-  margin: 56px 0 56px 0;
-}
-
-.stellen-container,
-.kunde-container,
-.datenschutz,
-.impressum {
+.impressum-container,
+.stellen-container {
   padding-top: 16vh;
   padding-bottom: 20vh;
+  padding-left: 33vw;
+  padding-right: 33vw;
 }
 
-.stellen-container,
-.datenschutz,
-.impressum {
-  padding-right: 25vw;
-  padding-left: 33vw;
+.paragraph-text-rechts-oben-container h1, .paragraph-text-rechts-oben-container .h1 {
+  margin-bottom: 20px;
+}
+.paragraph-text-rechts-oben-container p {
+  margin-top: 10px;
 }
 
 .paragraph--type--block-text-mitte {
-  display: flex;
-  align-content: center;
-  text-align: left;
-  flex-wrap: wrap;
+  background-color: #F1f1f1;
+  padding-top: 16vh;
+  padding-bottom: 20vh;
   padding-left: 33vw;
   padding-right: 33vw;
-  background-color: #F1f1f1;
 }
 
 .paragraph--type--spaltenabschnitt {
   padding: 16vh 10vw 16vh 25vw;
 }
 
-.kunde-container {
-  padding-left: 33vw;
-  padding-right: 33vw;
+.node__meta {
+  display: none;
 }
 
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-  color: #333;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.views-element-container .person-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  .views-element-container .person-container {
-    flex-direction: row;
-  }
-}
-.views-element-container .person-container .views-field {
-  margin: 10px 0;
-}
-.views-element-container .person-container .views-field-name {
-  font-size: 2em;
+.field--name-field-firmenname {
   font-weight: bold;
-}
-.views-element-container .person-container .views-field-position, .views-element-container .person-container .views-field-abteilung {
-  font-size: 1.2em;
-  color: #1a1a1a;
-}
-.views-element-container .person-container .views-field-personenbild {
-  width: 100%;
-}
-.views-element-container .person-container .views-field-personenbild img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.views-element-container .person-container .views-field-personentelefonnummer, .views-element-container .person-container .views-field-personen-email {
-  font-size: 0.9em;
-}
-
-#logo-atlantiq {
-  z-index: 1031;
-  position: absolute;
-  width: 200px;
-  height: 45px;
 }
 
 #block-atlantiq-footeroben {
   z-index: 1;
   position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+#block-atlantiq-footeroben .field {
+  margin-right: 15px;
+}
+#block-atlantiq-footeroben .field:last-child {
+  margin-right: 0;
+}
+
+#block-atlantiq-beschreibungstextlinks {
+  z-index: 1;
+  position: absolute;
   bottom: 3%;
-  right: 3%;
+  left: 3%;
+}
+
+#logo-atlantiq {
+  z-index: 1031;
+  position: absolute;
+  height: 45px;
 }
 
 .block-views-exposed-filter-blocksuche-page-1 form {
@@ -11749,9 +11700,26 @@ body {
   top: 1.1rem;
 }
 
-.datenschutz {
+.datenschutz-container {
   height: 561px;
   overflow-y: scroll;
+  margin: 0 25vw 0 33vw;
+}
+
+/* Stil für die Scrollbar selbst */
+.datenschutz-container::-webkit-scrollbar {
+  width: 12px; /* Breite der Scrollbar */
+}
+
+/* Stil für das Handle */
+.datenschutz-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey; /* Farbe des Scrollbar-Handles */
+  border-radius: 10px; /* Rundung der Ecken des Handles */
+}
+
+/* Stil für die Bahn der Scrollbar */
+.datenschutz-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Farbe des Scrollbar-Tracks */
 }
 
 /*# sourceMappingURL=theme.css.map */

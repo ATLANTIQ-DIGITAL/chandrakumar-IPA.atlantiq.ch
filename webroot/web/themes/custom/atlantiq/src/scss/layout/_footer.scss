@@ -1,0 +1,28 @@
+.field--name-field-firmenname{
+  font-weight: bold;
+}
+#block-atlantiq-footeroben{
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  .field {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+#block-atlantiq-beschreibungstextlinks{
+  z-index: 1;
+  position: absolute;
+  bottom: 3%;
+  left: 3%;
+}

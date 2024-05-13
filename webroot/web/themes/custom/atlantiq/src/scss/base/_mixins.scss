@@ -1,0 +1,22 @@
+// Wiederverwendbare Mixins für häufig benötigte Style-Definitionen.
+
+@mixin full-size-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin apply-padding($map, $position) {
+  padding-top: map-get($map, $position);
+  padding-bottom: map-get($map, $position);
+  padding-left: map-get($map, $position);
+  padding-right: map-get($map, $position);
+}
+
+@mixin text-formatting($title-margin-bottom, $description-margin-top) {
+  h1 {
+    margin-bottom: $title-margin-bottom; // Abstand unter dem Titel
+  }
+  p {
+    margin-top: $description-margin-top; // Abstand über der Beschreibung
+  }
+}

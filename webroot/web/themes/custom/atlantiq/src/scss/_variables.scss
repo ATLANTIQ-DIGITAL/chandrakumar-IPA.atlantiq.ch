@@ -1,27 +1,27 @@
 $enable-rounded: false;
 
-/*
-// Farben
-$color-primary: #556cd6;
-$color-secondary: #198754;
-$color-light: #f8f9fa;
-$color-dark: #343a40;
+// Typografie und Basis-Dimensionen
+$font-family: 'Helvetica', 'Arial', sans-serif;
+$primary-color: #333;
+$secondary-color: #f0f0f0;
+$base-font-size: 16px;
+$spacing-unit: 20px;
 
-// Typografie
-$font-size-base: 16px;
-$font-size-lg: 18px;
-$font-size-sm: 14px;
+// Spezifische Farben und Layout-Dimensionen
+$yellow-background: #FFFF00;
+$light-grey-background: #F1f1f1;
 
-// Breakpoints
-$breakpoint-sm: 576px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 992px;
-$breakpoint-xl: 1200px;
+// Definition des Container-Margin Höhe
+$container-margin: 56px 0 56px 0;
 
-// Abstände
-$spacing-xs: 5px;
-$spacing-sm: 10px;
-$spacing-md: 15px;
-$spacing-lg: 20px;
-$spacing-xl: 30px;
-*/
+// Definition der Container-Padding-Variablen
+$container-padding: (
+  'top': 16vh,
+  'bottom': 20vh,
+  'left-breit': 33vw,
+  'left-schmal': 25vw,
+  'right-schmal': 25vw,
+  'right-breit': 33vw,
+  'spalten': (16vh 10vw 16vh 25vw)
+);
+
