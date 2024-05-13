@@ -13,9 +13,13 @@ atlantiq:
   css:
     theme:
       dist/css/theme.css: { minified: true }
-#  js:
-#    src/js/theme.js: { }
+  js:
+    /modules/custom/team_manager/js/team_manager_drag_and_drop.js: { }
+
   dependencies:
     - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.ui
     - core/once
     - atlantiq/bootstrap

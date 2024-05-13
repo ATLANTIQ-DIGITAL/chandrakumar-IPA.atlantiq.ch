@@ -1,8 +1,13 @@
-drag_and_drop:
-  version: 1.x
-  js:
-    js/team_manager_drag_and_drop.js: { }
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
+#drag_and_drop:
+#  version: 1.x
+#  js:
+#   /themes/custom/atlantiq/dist/js/bootstrap.bundle.js: { }
+#    /modules/custom/team_manager/js/team_manager_drag_and_drop.js: { }
+
+#  dependencies:
+#    - core/drupal
+#    - core/drupalSettings
+#    - core/jquery
+#    - core/jquery.ui
+#    - core/once
+#    - atlantiq/bootstrap

@@ -44,9 +44,9 @@ function team_manager_form_node_form_alter(&$form, FormStateInterface $form_stat
     $title_value = $form['title']['widget'][0]['value']['#default_value'];
 
     // Debugging-Nachricht ausgeben
-  //  \Drupal::messenger()->addMessage('Der Titelwert ist: ' . $title_value);
+    \Drupal::messenger()->addMessage('Der Titelwert ist: ' . $title_value);
 
     // Füge das JavaScript für Drag-and-Drop hinzu
-    $form['#attached']['library'][] = 'team_manager/drag_and_drop';
+    $form['#attached']['library'][] = 'atlantiq/atlantiq';
   }
 }
