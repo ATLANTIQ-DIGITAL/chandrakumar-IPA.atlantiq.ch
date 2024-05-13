@@ -1,8 +1,6 @@
 drag_and_drop:
   version: 1.x
   js:
-    /themes/custom/atlantiq/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js: { }
-    js/Sortable.min.js: { }
     js/team_manager_drag_and_drop.js: { }
   dependencies:
     - core/jquery

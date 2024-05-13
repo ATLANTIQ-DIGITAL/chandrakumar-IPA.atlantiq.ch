@@ -1,10 +1,52 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\BubbleableMetadata;
+use Drupal\views\ViewExecutable;
+use Drupal\Core\Routing\RouteMatchInterface;
+//Gewichtung Inkrementierung
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\Node;
 
 /**
- * Implements hook_page_attachments().
+ * Implements hook_ENTITY_TYPE_presave() for node entities.
  */
-function team_manager_page_attachments(array &$attachments) {
-  $attachments['#attached']['library'][] = 'team_manager/drag_and_drop';
+
+function team_manager_node_presave(EntityInterface $entity) {
+  if ($entity->bundle() === 'person' && $entity->isNew()) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'person')
+      ->sort('field_gewichtung', 'DESC')
+      ->range(0, 1)
+      ->accessCheck(FALSE);  // Zugriffskontrolle wird nicht angewendet
+
+    $highest_weight = $query->execute();
+
+    $weight = 0; // Standardgewicht, wenn noch keine Inhalte vorhanden sind
+    if (!empty($highest_weight)) {
+      $node = Node::load(reset($highest_weight));
+      $weight = $node->field_gewichtung->value;
+    }
+
+    // Inkrementiert das Gewicht für den neuen Node
+    $entity->field_gewichtung->value = $weight + 1;
+  }
+}
+
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for node_form.
+ */
+function team_manager_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Überprüfe, ob es sich um das Bearbeitungsformular für Inhalte des Typs "Einfache Seite" handelt
+  if ($form_id == 'node_page_edit_form') {
+    // Den Wert des Titelfelds überprüfen
+    $title_value = $form['title']['widget'][0]['value']['#default_value'];
+
+    // Debugging-Nachricht ausgeben
+  //  \Drupal::messenger()->addMessage('Der Titelwert ist: ' . $title_value);
+
+    // Füge das JavaScript für Drag-and-Drop hinzu
+    $form['#attached']['library'][] = 'team_manager/drag_and_drop';
+  }
 }
