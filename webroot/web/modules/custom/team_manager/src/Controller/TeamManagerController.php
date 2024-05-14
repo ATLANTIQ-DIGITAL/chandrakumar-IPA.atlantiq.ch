@@ -12,11 +12,19 @@ class TeamManagerController extends ControllerBase {
     $content = json_decode($request->getContent(), true);
     $responses = [];
     foreach ($content['items'] as $item) {
-      $node = Node::load($item['id']);
-      if ($node) {
-        $node->set('field_gewichtung', $item['weight']);
-        $node->save();
-        $responses[] = ['id' => $item['id'], 'status' => 'updated'];
+      // Überprüfen, ob die ID des Elements gesetzt und nicht leer ist
+      if (!empty($item['id'])) {
+        $node = Node::load($item['id']);
+        if ($node) {
+          // Setze das Gewicht entsprechend der neuen Reihenfolge
+          $node->set('field_gewichtung_value', $item['index']); // 'index' verwenden
+          // Speichere den Knoten
+          $node->save();
+          $responses[] = ['id' => $item['id'], 'status' => 'updated'];
+        }
+      } else {
+        // Füge eine Meldung hinzu, dass die ID ungültig ist
+        $responses[] = ['id' => null, 'status' => 'error', 'message' => 'Invalid ID'];
       }
     }
     return new JsonResponse(['status' => 'success', 'message' => 'Weights updated successfully', 'details' => $responses]);

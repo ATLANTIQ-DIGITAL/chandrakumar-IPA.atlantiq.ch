@@ -6,3 +6,12 @@ package: Custom
 dependencies:
   - drupal:node
   - drupal:views
+
+twig:
+  debug: true
+  auto_reload: true
+  cache: false
+
+# Define custom templates.
+templates:
+  - '/modules/custom/team_manager/templates/views-view-unformatted.html.twig'

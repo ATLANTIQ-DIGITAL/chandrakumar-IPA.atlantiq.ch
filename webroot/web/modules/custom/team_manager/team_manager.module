@@ -8,6 +8,31 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\Entity\Node;
 
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() to provide template suggestions.
+ */
+function team_manager_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
+  // Get the current route name.
+  $current_route = \Drupal::routeMatch()->getRouteName();
+
+  // Check if the current route is the node edit form page.
+  if (str_starts_with($current_route, 'entity.node.edit_form')) {
+    // Check if the node being edited is of type "Person".
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node && $node->getType() == 'person') {
+      // Add a suggestion for the views-view-unformatted template on the node edit form page.
+      $suggestions[] = 'views_view_unformatted__node_edit_form';
+
+      // Debugging message.
+      \Drupal::messenger()->addMessage('test');
+    }
+  }
+}
+
+
+
+
 /**
  * Implements hook_ENTITY_TYPE_presave() for node entities.
  */

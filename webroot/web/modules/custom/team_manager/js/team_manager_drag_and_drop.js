@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  console.log("Test Start");
+  console.log('test1');
   const container = document.querySelector('.view-content.gin-layer-wrapper');
 
   container.addEventListener('dragover', function (e) {
@@ -12,29 +12,28 @@ document.addEventListener('DOMContentLoaded', function () {
       container.insertBefore(draggingElement, nextElement);
     }
   });
-
+  console.log('test2');
   container.addEventListener('drop', function (e) {
     e.preventDefault();
     updateOrder();
   });
-
+  console.log('test3');
   function updateOrder() {
     const items = Array.from(container.querySelectorAll('.views-row')).map((item, index) => ({
-      id: index + 1, // Verwende die Indexposition als ID
-      weight: index
+      id: item.dataset.id, // ID des Elements
+      weight: index // Indexposition als Gewicht
     }));
 
+    // AJAX-Anfrage senden
     fetch('/team-manager/update-weights', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        // Entferne die Zeile für das CSRF-Token
       },
       body: JSON.stringify({ items })
     })
       .then(response => response.json())
       .then(data => console.log(data));
+    console.log('test4');
   }
-
-  console.log("Test Ende");
 });

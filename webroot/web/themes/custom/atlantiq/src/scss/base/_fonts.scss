@@ -1,4 +1,42 @@
-$font-family: 'Helvetica', 'Arial', sans-serif; // Primäre Schriftfamilie
+@font-face {
+  font-family: 'CharterBT-Bold';
+  src: url('../../fonts/3249CF_0_0.eot');
+  src: url('../../fonts/3249CF_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/3249CF_0_0.woff2') format('woff2'),
+  url('../../fonts/3249CF_0_0.woff') format('woff'),
+  url('../../fonts/3249CF_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CharterBT-Roman';
+  src: url('../../fonts/3249CF_1_0.eot');
+  src: url('../../fonts/3249CF_1_0.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/3249CF_1_0.woff2') format('woff2'),
+  url('../../fonts/3249CF_1_0.woff') format('woff'),
+  url('../../fonts/3249CF_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CharterBT-Italic';
+  src: url('../../fonts/3249CF_2_0.eot');
+  src: url('../../fonts/3249CF_2_0.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/3249CF_2_0.woff2') format('woff2'),
+  url('../../fonts/3249CF_2_0.woff') format('woff'),
+  url('../../fonts/3249CF_2_0.ttf') format('truetype');
+}
+
+body {
+  font-family: 'CharterBT-Roman', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'CharterBT-Bold', sans-serif;
+}
+
+em, i {
+  font-family: 'CharterBT-Italic', sans-serif;
+}
+
 
 a {
   text-decoration: none;
