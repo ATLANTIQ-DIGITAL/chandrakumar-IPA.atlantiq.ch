@@ -1,10 +1,32 @@
 // Grundlegende Styles, die auf das gesamte Projekt angewendet werden.
+// base.scss
 
-body {
-  font-family: $font-family;
-  color: $primary-color;
-  font-size: $base-font-size;
+// Reset-Stile
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+// Basis-Stile für das gesamte Dokument
+body {
+  font-family: $font-family-body;
+  font-size: $p-size;
+  color: $color-black;
+  line-height: 1.6;
+}
+
+// Typografie-Stile
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+

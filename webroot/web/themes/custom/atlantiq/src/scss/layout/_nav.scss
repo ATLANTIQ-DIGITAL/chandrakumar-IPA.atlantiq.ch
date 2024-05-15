@@ -1,5 +1,128 @@
+// Mixin für den gelben Streifen-Effekt
+@mixin yellow-stripe($font-size, $stripe-height) {
+  position: relative; // Um Pseudo-Elemente verwenden zu können
+  font-family: $font-family-heading;
+  font-size: $font-size; // Überschriften-Größe
+  color: $color-black; // Standardfarbe
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &.active,
+  &:hover {
+    color: $color-black; // Standardfarbe bleibt schwarz
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); // Zentriert das Pseudo-Element horizontal und vertikal
+      width: calc(100% + 20px); // Breite des gelben Streifens, etwas breiter als der Text
+      height: $stripe-height; // Höhe des gelben Streifens
+      background-color: $color-yellow;
+      z-index: -1; // Streifen hinter dem Text
+    }
+  }
+
+  &.active::before {
+    background-color: $color-yellow;
+  }
+}
+
+// Logo-Styles
 #logo-atlantiq {
   z-index: 1031;
   position: absolute;
   height: 45px;
+}
+
+// Anpassung für die Navigation, damit sie nur den linken Teil des Bildschirms einnimmt
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 56px;
+  height: 100%;
+  width: 300px; // Breite der Navigation auf 300px festlegen
+  z-index: 1030; // Sicherstellen, dass die Navigation über dem restlichen Inhalt liegt
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16vh 0 0 0;
+  background: none; // Hintergrund entfernen
+}
+
+.custom-nav-container {
+  width: 100%;
+}
+
+.menu__main {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column!important; // Stellt die Hauptnavigation untereinander dar
+
+  .nav-item {
+    margin-bottom: 0; // Verringerter Abstand zwischen den Menüeinträgen
+
+    .nav-link {
+      @include yellow-stripe(45px, 25px); // Mixin für den gelben Streifen-Effekt in der Hauptnavigation
+    }
+  }
+}
+
+#block-atlantiq-leistungenmenu,
+#block-atlantiq-kundenmenu,
+#block-atlantiq-agenturmenu,
+#block-atlantiq-jobsmenu {
+  margin-top: 158px; // Abstand zum Hauptmenü erhöhen
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 3px; // Verringerter Abstand zwischen den Untermenüeinträgen
+
+      a {
+        @include yellow-stripe(23px, 15px); // Mixin für den gelben Streifen-Effekt in der Subnavigation
+      }
+    }
+  }
+}
+
+// Mobile Anpassungen
+@media (max-width: 768px) {
+  .custom-nav {
+    width: 100%; // Navigation über die gesamte Breite auf mobilen Geräten
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu__main {
+    .nav-item {
+      margin-bottom: 10px; // Anpassung für mobilen Abstand
+
+      .nav-link {
+        font-size: 32px; // Mobile Schriftgröße für Hauptmenü
+      }
+    }
+  }
+
+  #block-atlantiq-leistungenmenu,
+  #block-atlantiq-kundenmenu,
+  #block-atlantiq-agenturmenu,
+  #block-atlantiq-jobsmenu {
+    ul {
+      li {
+        margin-bottom: 5px; // Anpassung für mobilen Abstand
+
+        a {
+          font-size: 18px; // Mobile Schriftgröße für Untermenü
+        }
+      }
+    }
+  }
 }

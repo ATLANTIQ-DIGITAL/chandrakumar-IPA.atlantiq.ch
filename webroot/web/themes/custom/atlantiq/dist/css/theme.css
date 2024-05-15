@@ -11577,12 +11577,27 @@ textarea.form-control-lg {
   src: url("../../fonts/3249CF_2_0.eot");
   src: url("../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../fonts/3249CF_2_0.woff") format("woff"), url("../../fonts/3249CF_2_0.ttf") format("truetype");
 }
+@font-face {
+  font-family: "CharterBT-Bold";
+  src: url("../../fonts/3249CF_0_0.eot");
+  src: url("../../fonts/3249CF_0_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_0_0.woff2") format("woff2"), url("../../fonts/3249CF_0_0.woff") format("woff"), url("../../fonts/3249CF_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CharterBT-Roman";
+  src: url("../../fonts/3249CF_1_0.eot");
+  src: url("../../fonts/3249CF_1_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_1_0.woff2") format("woff2"), url("../../fonts/3249CF_1_0.woff") format("woff"), url("../../fonts/3249CF_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CharterBT-Italic";
+  src: url("../../fonts/3249CF_2_0.eot");
+  src: url("../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../fonts/3249CF_2_0.woff") format("woff"), url("../../fonts/3249CF_2_0.ttf") format("truetype");
+}
 body {
-  font-family: "CharterBT-Roman", sans-serif;
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "CharterBT-Bold", sans-serif;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
 }
 
 em, i {
@@ -11600,13 +11615,70 @@ ul {
   margin: 0;
 }
 
-body {
-  font-family: "Helvetica", "Arial", sans-serif;
-  color: #333;
-  font-size: 16px;
+h1, .h1 {
+  font-size: 4.0625rem;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+h1.large, .large.h1 {
+  font-size: 4.25rem;
+}
+
+h2, .h2 {
+  font-size: 2.8125rem;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+h2.large, .large.h2 {
+  font-size: 3rem;
+}
+
+h3, .h3 {
+  font-size: 1.4375rem;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+h3.large, .large.h3 {
+  font-size: 1.625rem;
+}
+
+h4, .h4 {
+  font-size: 1.125rem;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
+}
+
+a {
+  font-size: 1rem;
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
+}
+a.small {
+  font-size: 0.75rem;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 main > .container {
@@ -11633,6 +11705,7 @@ main > .container {
 .paragraph-text-rechts-oben-container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .stellen-container {
@@ -11648,15 +11721,72 @@ main > .container {
   padding-right: 33vw;
 }
 
-.paragraph-text-rechts-oben-container h1, .paragraph-text-rechts-oben-container .h1 {
-  margin-bottom: 20px;
+.paragraph-text-rechts-oben-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 16vh;
+  padding-right: 5vw;
+  padding-bottom: 20vh;
+  padding-left: 33vw;
+  overflow: hidden;
 }
-.paragraph-text-rechts-oben-container p {
-  margin-top: 10px;
+@media (max-width: 768px) {
+  .paragraph-text-rechts-oben-container {
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 25vw;
+    padding-left: 25vw;
+  }
+}
+@media (max-width: 576px) {
+  .paragraph-text-rechts-oben-container {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
+.paragraph-text-rechts-oben-container .content {
+  max-width: 50%;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .paragraph-text-rechts-oben-container .content {
+    padding: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .paragraph-text-rechts-oben-container .content {
+    max-width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+}
+.paragraph-text-rechts-oben-container .content h1, .paragraph-text-rechts-oben-container .content .h1 {
+  color: #FFFF00;
+  font-size: 4.0625rem;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+@media (max-width: 768px) {
+  .paragraph-text-rechts-oben-container .content h1, .paragraph-text-rechts-oben-container .content .h1 {
+    font-size: 4.25rem;
+  }
+}
+.paragraph-text-rechts-oben-container .content p {
+  color: #000000;
+  font-size: 1rem;
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
+}
+@media (max-width: 768px) {
+  .paragraph-text-rechts-oben-container .content p {
+    font-size: 1rem;
+  }
 }
 
 .paragraph--type--block-text-mitte {
-  background-color: #F1f1f1;
+  background-color: #F1f1f1 !important;
   padding-top: 16vh;
   padding-bottom: 20vh;
   padding-left: 33vw;
@@ -11684,12 +11814,19 @@ main > .container {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 }
 #block-atlantiq-footeroben .field {
   margin-right: 15px;
 }
 #block-atlantiq-footeroben .field:last-child {
   margin-right: 0;
+}
+
+.footer-column {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #block-atlantiq-beschreibungstextlinks {
@@ -11705,6 +11842,151 @@ main > .container {
   height: 45px;
 }
 
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 56px;
+  height: 100%;
+  width: 300px;
+  z-index: 1030;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16vh 0 0 0;
+  background: none;
+}
+
+.custom-nav-container {
+  width: 100%;
+}
+
+.menu__main {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column !important;
+}
+.menu__main .nav-item {
+  margin-bottom: 0;
+}
+.menu__main .nav-item .nav-link {
+  position: relative;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+  font-size: 45px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu__main .nav-item .nav-link.active, .menu__main .nav-item .nav-link:hover {
+  color: #000000;
+}
+.menu__main .nav-item .nav-link.active::before, .menu__main .nav-item .nav-link:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: 25px;
+  background-color: #ffff00;
+  z-index: -1;
+}
+.menu__main .nav-item .nav-link.active::before {
+  background-color: #ffff00;
+}
+
+#block-atlantiq-leistungenmenu,
+#block-atlantiq-kundenmenu,
+#block-atlantiq-agenturmenu,
+#block-atlantiq-jobsmenu {
+  margin-top: 158px;
+}
+#block-atlantiq-leistungenmenu ul,
+#block-atlantiq-kundenmenu ul,
+#block-atlantiq-agenturmenu ul,
+#block-atlantiq-jobsmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#block-atlantiq-leistungenmenu ul li,
+#block-atlantiq-kundenmenu ul li,
+#block-atlantiq-agenturmenu ul li,
+#block-atlantiq-jobsmenu ul li {
+  margin-bottom: 3px;
+}
+#block-atlantiq-leistungenmenu ul li a,
+#block-atlantiq-kundenmenu ul li a,
+#block-atlantiq-agenturmenu ul li a,
+#block-atlantiq-jobsmenu ul li a {
+  position: relative;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+  font-size: 23px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#block-atlantiq-leistungenmenu ul li a.active, #block-atlantiq-leistungenmenu ul li a:hover,
+#block-atlantiq-kundenmenu ul li a.active,
+#block-atlantiq-kundenmenu ul li a:hover,
+#block-atlantiq-agenturmenu ul li a.active,
+#block-atlantiq-agenturmenu ul li a:hover,
+#block-atlantiq-jobsmenu ul li a.active,
+#block-atlantiq-jobsmenu ul li a:hover {
+  color: #000000;
+}
+#block-atlantiq-leistungenmenu ul li a.active::before, #block-atlantiq-leistungenmenu ul li a:hover::before,
+#block-atlantiq-kundenmenu ul li a.active::before,
+#block-atlantiq-kundenmenu ul li a:hover::before,
+#block-atlantiq-agenturmenu ul li a.active::before,
+#block-atlantiq-agenturmenu ul li a:hover::before,
+#block-atlantiq-jobsmenu ul li a.active::before,
+#block-atlantiq-jobsmenu ul li a:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: 15px;
+  background-color: #ffff00;
+  z-index: -1;
+}
+#block-atlantiq-leistungenmenu ul li a.active::before,
+#block-atlantiq-kundenmenu ul li a.active::before,
+#block-atlantiq-agenturmenu ul li a.active::before,
+#block-atlantiq-jobsmenu ul li a.active::before {
+  background-color: #ffff00;
+}
+
+@media (max-width: 768px) {
+  .custom-nav {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+  .menu__main .nav-item {
+    margin-bottom: 10px;
+  }
+  .menu__main .nav-item .nav-link {
+    font-size: 32px;
+  }
+  #block-atlantiq-leistungenmenu ul li,
+  #block-atlantiq-kundenmenu ul li,
+  #block-atlantiq-agenturmenu ul li,
+  #block-atlantiq-jobsmenu ul li {
+    margin-bottom: 5px;
+  }
+  #block-atlantiq-leistungenmenu ul li a,
+  #block-atlantiq-kundenmenu ul li a,
+  #block-atlantiq-agenturmenu ul li a,
+  #block-atlantiq-jobsmenu ul li a {
+    font-size: 18px;
+  }
+}
 .block-views-exposed-filter-blocksuche-page-1 form {
   position: relative;
 }
@@ -11731,7 +12013,7 @@ main > .container {
 .datenschutz-container {
   height: 561px;
   overflow-y: scroll;
-  margin: 0 25vw 0 33vw;
+  margin: 15vh 25vw 0 33vw;
 }
 
 /* Stil für die Scrollbar selbst */

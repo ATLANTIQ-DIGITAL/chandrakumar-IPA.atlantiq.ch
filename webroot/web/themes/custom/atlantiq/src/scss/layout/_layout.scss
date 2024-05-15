@@ -1,13 +1,16 @@
 main > .container {
   padding: 70px 15px 25px 30px;
 }
+
 .paragraph {
   margin-bottom: 5rem;
 }
+
 .paragraph .paragraph {
   margin-bottom: 1rem;
 }
-.paragraph--type--slider .field__item img{
+
+.paragraph--type--slider .field__item img {
   width: 33%;
   height: auto;
 }
@@ -17,8 +20,9 @@ main > .container {
 .kunde-container,
 .person-container,
 .paragraph--type--block-text-mitte,
-.paragraph-text-rechts-oben-container{
+.paragraph-text-rechts-oben-container {
   @include full-size-container;
+  overflow: hidden;
 }
 
 // Spezifischer Hintergrund nur für 'stellen-container'
@@ -29,7 +33,7 @@ main > .container {
 // Padding-Anpassungen für Kunde-Container, und Impressum
 .kunde-container,
 .impressum-container,
-.stellen-container{
+.stellen-container {
   padding-top: map-get($container-padding, 'top');
   padding-bottom: map-get($container-padding, 'bottom');
   padding-left: map-get($container-padding, 'left-breit');
@@ -38,11 +42,67 @@ main > .container {
 
 // Padding-Anpassungen für Block-Text-oben-rechts-Container
 .paragraph-text-rechts-oben-container {
-  @include text-formatting(20px, 10px);
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: map-get($container-padding, 'top');
+  padding-right: 5vw;
+  padding-bottom: map-get($container-padding, 'bottom');
+  padding-left: map-get($container-padding, 'left-breit');
+  overflow: hidden; // Füge dies hinzu, um Überlaufen zu verhindern
+
+  @include respond-to(md) {
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: map-get($container-padding, 'right-schmal');
+    padding-left: map-get($container-padding, 'left-schmal');
+  }
+
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
+  .content {
+    max-width: 50%;
+    padding: 20px;
+
+    @include respond-to(md) {
+      padding: 36px;
+    }
+
+    @include respond-to(sm) {
+      max-width: 100%;
+      padding: 20px; // Füge Padding für die mobile Ansicht hinzu
+      overflow: auto; // Füge dies hinzu, um Überlaufen zu verhindern
+    }
+
+    h1 {
+      color: #FFFF00; // Farbe der Überschrift
+      @include heading($h1-size, $font-family-heading);
+
+      @include respond-to(md) {
+        font-size: $h1-size-large;
+      }
+    }
+
+    p {
+      color: #000000; // Farbe des Beschreibungstexts
+      @include body-text($p-size, $font-family-body);
+
+      @include respond-to(md) {
+        font-size: $p-size;
+      }
+    }
+  }
 }
+
 // Padding-Anpassungen für Paragraph mit Block-Text-Mitte
 .paragraph--type--block-text-mitte {
-  background-color: $light-grey-background;
+  background-color: $light-grey-background!important;
   padding-top: map-get($container-padding, 'top');
   padding-bottom: map-get($container-padding, 'bottom');
   padding-left: map-get($container-padding, 'left-breit');
@@ -53,8 +113,8 @@ main > .container {
 .paragraph--type--spaltenabschnitt {
   padding: map-get($container-padding, 'spalten');
 }
-//sonstiges
-.node__meta{
+
+// Sonstiges
+.node__meta {
   display: none;
 }
-

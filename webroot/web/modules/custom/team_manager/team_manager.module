@@ -31,8 +31,6 @@ function team_manager_theme_suggestions_views_view_unformatted_alter(array &$sug
 }
 
 
-
-
 /**
  * Implements hook_ENTITY_TYPE_presave() for node entities.
  */

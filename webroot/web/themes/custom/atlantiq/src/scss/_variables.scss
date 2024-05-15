@@ -1,15 +1,21 @@
 $enable-rounded: false;
 
-// Typografie und Basis-Dimensionen
-$font-family: 'Helvetica', 'Arial', sans-serif;
-$primary-color: #333;
-$secondary-color: #f0f0f0;
-$base-font-size: 16px;
-$spacing-unit: 20px;
+// variables.scss
+$base-font-size: 16px; // Basis-Schriftgröße
+$h1-size: 4.0625rem; // 65pt umgerechnet in rem (65 / 16)
+$h1-size-large: 4.25rem; // 68pt umgerechnet in rem
+$h2-size: 2.8125rem; // 45pt umgerechnet in rem
+$h2-size-large: 3rem; // 48pt umgerechnet in rem
+$h3-size: 1.4375rem; // 23pt umgerechnet in rem
+$h3-size-large: 1.625rem; // 26pt umgerechnet in rem
+$h4-size: 1.125rem; // 18pt umgerechnet in rem
+$p-size: 1rem; // 16pt umgerechnet in rem
+$link-size: 1rem; // 16pt umgerechnet in rem
+$link-size-small: 0.75rem; // 12pt umgerechnet in rem
 
-// Spezifische Farben und Layout-Dimensionen
-$yellow-background: #FFFF00;
-$light-grey-background: #F1f1f1;
+$nav-main-size: 2.8125rem; // 45pt umgerechnet in rem
+$nav-sub-size: 1.4375rem; // 23pt umgerechnet in rem
+
 
 // Definition des Container-Margin Höhe
 $container-margin: 56px 0 56px 0;

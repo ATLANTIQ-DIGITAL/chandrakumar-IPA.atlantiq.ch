@@ -1,4 +1,16 @@
+// mixins.scss
+
 // Wiederverwendbare Mixins für häufig benötigte Style-Definitionen.
+
+@mixin heading($size, $font-family) {
+  font-size: $size;
+  font-family: $font-family;
+}
+
+@mixin body-text($size, $font-family) {
+  font-size: $size;
+  font-family: $font-family;
+}
 
 @mixin full-size-container {
   width: 100vw;

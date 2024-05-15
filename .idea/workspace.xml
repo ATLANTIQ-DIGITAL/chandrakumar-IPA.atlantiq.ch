@@ -1,20 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7ecee77-1d69-49e1-a1ed-7acd99639b05" name="Changes" comment="" />
+    <list default="true" id="e5c77da6-dbbc-4f28-9705-957ee6b3453a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/templates/views-view-unformatted.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/charter.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/js/carousel_transition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/js/team_manager_drag_and_drop.js" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/js/team_manager_drag_and_drop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/src/Controller/TeamManagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/src/Controller/TeamManagerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.info.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.module" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_member_order/team_member_order.info.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_member_order/team_member_order.module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/base/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/base/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/layout/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/layout/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/field/field--paragraph--field-images--slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/field/field--paragraph--field-images--slider.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/paragraphs/paragraph--slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/paragraphs/paragraph--slider.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/views/views-view-unformatted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/views/views-view-unformatted.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/HttpFoundation/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/ClassFinder/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/drupal-assets-fixture/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Assertion/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/tfa/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/paragraphs/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/webform/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Gettext/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/FileCache/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Render/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/extlink/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/FileSystem/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/twig_tweak/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Version/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/themes/contrib/gin/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Annotation/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Utility/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/eu_cookie_compliance/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/shield/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/webform/modules/webform_scheduled_email/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/PhpStorage/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Diff/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/admin_toolbar/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/token/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/empty-fixture/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/FrontMatter/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/devel/devel_generate/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/pathauto/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Uuid/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/key/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Discovery/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/empty-file/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/empty-fixture-allowing-core/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Plugin/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/simple_sitemap/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/scaffold-override-fixture/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/viewsreference/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/EventDispatcher/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/project-with-empty-scaffold-path/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/devel/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/gin_toolbar/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/DependencyInjection/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/project-with-illegal-dir-scaffold/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/encrypt/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/FileSecurity/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Serialization/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/metatag/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Transliteration/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/entity_reference_revisions/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/tests/Drupal/Tests/Composer/Plugin/Scaffold/fixtures/drupal-core-fixture/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Datetime/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/modules/system/tests/fixtures/HtaccessTest/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/modules/contrib/ctools/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/Graph/composer.json" />
+      <option value="$PROJECT_DIR$/webroot/web/core/lib/Drupal/Component/ProxyBuilder/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/webroot/composer.json</pharConfigPath>
     <execution />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.2.7_1/bin/php" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
-  <component name="ProjectId" id="2fS1tjdZWKNGldiZRBHTmz5iKGJ" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.2.7_1/bin/php">
+    <include_path>
+      <path value="$PROJECT_DIR$/webroot/vendor/chillerlan/php-settings-container" />
+      <path value="$PROJECT_DIR$/webroot/vendor/chillerlan/php-qrcode" />
+      <path value="$PROJECT_DIR$/webroot/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/webroot/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/webroot/vendor/phootwork/lang" />
+      <path value="$PROJECT_DIR$/webroot/vendor/phootwork/collection" />
+      <path value="$PROJECT_DIR$/webroot/vendor/paragonie/constant_time_encoding" />
+      <path value="$PROJECT_DIR$/webroot/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/annotated-command" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/config" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/site-process" />
+      <path value="$PROJECT_DIR$/webroot/vendor/phpowermove/docblock" />
+      <path value="$PROJECT_DIR$/webroot/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/webroot/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/webroot/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/webroot/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/webroot/vendor/christian-riesen/otp" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/site-alias" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/filter-via-dot-access-data" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/robo" />
+      <path value="$PROJECT_DIR$/webroot/vendor/composer" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/log" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/self-update" />
+      <path value="$PROJECT_DIR$/webroot/vendor/consolidation/output-formatters" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/webroot/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/webroot/vendor/mck89/peast" />
+      <path value="$PROJECT_DIR$/webroot/vendor/drush/drush" />
+      <path value="$PROJECT_DIR$/webroot/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/webroot/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/webroot/vendor/pear/pear-core-minimal" />
+      <path value="$PROJECT_DIR$/webroot/vendor/pear/archive_tar" />
+      <path value="$PROJECT_DIR$/webroot/vendor/pear/pear_exception" />
+      <path value="$PROJECT_DIR$/webroot/vendor/pear/console_getopt" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/webroot/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/webroot/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/webroot/vendor/webflo/drupal-finder" />
+      <path value="$PROJECT_DIR$/webroot/vendor/league/container" />
+      <path value="$PROJECT_DIR$/webroot/vendor/drupal/core-project-message" />
+      <path value="$PROJECT_DIR$/webroot/vendor/drupal/core-composer-scaffold" />
+      <path value="$PROJECT_DIR$/webroot/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/webroot/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/webroot/vendor/chi-teck/drupal-code-generator" />
+      <path value="$PROJECT_DIR$/webroot/vendor/grasmash/expander" />
+      <path value="$PROJECT_DIR$/webroot/vendor/grasmash/yaml-cli" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/webroot/vendor/doctrine/lexer" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fRh5pzD2w11mz9Y7xDQPqcl7WI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,19 +218,51 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "/Users/user/Documents/chandrakumar-IPA.atlantiq.ch",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "last_opened_file_path": "/Users/user/Documents/chandrakumar-IPA.atlantiq.ch/webroot/web/themes/custom/atlantiq/fonts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "watcher.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts" />
+      <recent name="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/img/logo" />
+      <recent name="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webroot/web/modules/custom/team_manager" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d7ecee77-1d69-49e1-a1ed-7acd99639b05" name="Changes" comment="" />
-      <created>1713779882534</created>
+      <changelist id="e5c77da6-dbbc-4f28-9705-957ee6b3453a" name="Changes" comment="" />
+      <created>1713769620459</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1713779882534</updated>
-      <workItem from="1713779884600" duration="33000" />
+      <updated>1713769620459</updated>
+      <workItem from="1713769621651" duration="13725000" />
+      <workItem from="1713866031046" duration="944000" />
+      <workItem from="1713967434685" duration="623000" />
+      <workItem from="1713968808106" duration="1169000" />
+      <workItem from="1714390530068" duration="5051000" />
+      <workItem from="1714551192276" duration="2990000" />
+      <workItem from="1715001576766" duration="2924000" />
+      <workItem from="1715064394015" duration="7165000" />
+      <workItem from="1715149860499" duration="17251000" />
+      <workItem from="1715320814403" duration="29041000" />
+      <workItem from="1715578972266" duration="20990000" />
+      <workItem from="1715665540579" duration="26561000" />
     </task>
     <servers />
   </component>
