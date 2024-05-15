@@ -11855,6 +11855,13 @@ main > .container {
   padding: 16vh 0 0 0;
   background: none;
 }
+@media (max-width: 768px) {
+  .custom-nav {
+    width: 100%;
+    align-items: center;
+    padding: 0;
+  }
+}
 
 .custom-nav-container {
   width: 100%;
@@ -11868,6 +11875,7 @@ main > .container {
   flex-direction: column !important;
 }
 .menu__main .nav-item {
+  height: 3rem;
   margin-bottom: 0;
 }
 .menu__main .nav-item .nav-link {
@@ -11896,12 +11904,21 @@ main > .container {
 .menu__main .nav-item .nav-link.active::before {
   background-color: #ffff00;
 }
+@media (max-width: 768px) {
+  .menu__main .nav-item {
+    height: 2rem;
+    margin-bottom: 10px;
+  }
+  .menu__main .nav-item .nav-link {
+    font-size: 32px;
+  }
+}
 
 #block-atlantiq-leistungenmenu,
 #block-atlantiq-kundenmenu,
 #block-atlantiq-agenturmenu,
 #block-atlantiq-jobsmenu {
-  margin-top: 158px;
+  margin-top: 3rem;
 }
 #block-atlantiq-leistungenmenu ul,
 #block-atlantiq-kundenmenu ul,
@@ -11961,19 +11978,7 @@ main > .container {
 #block-atlantiq-jobsmenu ul li a.active::before {
   background-color: #ffff00;
 }
-
 @media (max-width: 768px) {
-  .custom-nav {
-    width: 100%;
-    align-items: center;
-    padding: 0;
-  }
-  .menu__main .nav-item {
-    margin-bottom: 10px;
-  }
-  .menu__main .nav-item .nav-link {
-    font-size: 32px;
-  }
   #block-atlantiq-leistungenmenu ul li,
   #block-atlantiq-kundenmenu ul li,
   #block-atlantiq-agenturmenu ul li,
@@ -11987,6 +11992,7 @@ main > .container {
     font-size: 18px;
   }
 }
+
 .block-views-exposed-filter-blocksuche-page-1 form {
   position: relative;
 }

@@ -50,6 +50,12 @@
   justify-content: flex-start;
   padding: 16vh 0 0 0;
   background: none; // Hintergrund entfernen
+
+  @include respond-to(md) {
+    width: 100%; // Navigation über die gesamte Breite auf mobilen Geräten
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .custom-nav-container {
@@ -64,10 +70,20 @@
   flex-direction: column!important; // Stellt die Hauptnavigation untereinander dar
 
   .nav-item {
-    margin-bottom: 0; // Verringerter Abstand zwischen den Menüeinträgen
+    height: 3rem;
+    margin-bottom: 0;
 
     .nav-link {
       @include yellow-stripe(45px, 25px); // Mixin für den gelben Streifen-Effekt in der Hauptnavigation
+    }
+
+    @include respond-to(md) {
+      height: 2rem; // Anpassung der Höhe für mobile Geräte
+      margin-bottom: 10px; // Anpassung für mobilen Abstand
+
+      .nav-link {
+        font-size: 32px; // Mobile Schriftgröße für Hauptmenü
+      }
     }
   }
 }
@@ -76,7 +92,7 @@
 #block-atlantiq-kundenmenu,
 #block-atlantiq-agenturmenu,
 #block-atlantiq-jobsmenu {
-  margin-top: 158px; // Abstand zum Hauptmenü erhöhen
+  margin-top: 3rem;
 
   ul {
     list-style: none;
@@ -84,43 +100,17 @@
     margin: 0;
 
     li {
-      margin-bottom: 3px; // Verringerter Abstand zwischen den Untermenüeinträgen
+      margin-bottom: 3px;
 
       a {
         @include yellow-stripe(23px, 15px); // Mixin für den gelben Streifen-Effekt in der Subnavigation
       }
-    }
-  }
-}
 
-// Mobile Anpassungen
-@media (max-width: 768px) {
-  .custom-nav {
-    width: 100%; // Navigation über die gesamte Breite auf mobilen Geräten
-    align-items: center;
-    padding: 0;
-  }
-
-  .menu__main {
-    .nav-item {
-      margin-bottom: 10px; // Anpassung für mobilen Abstand
-
-      .nav-link {
-        font-size: 32px; // Mobile Schriftgröße für Hauptmenü
-      }
-    }
-  }
-
-  #block-atlantiq-leistungenmenu,
-  #block-atlantiq-kundenmenu,
-  #block-atlantiq-agenturmenu,
-  #block-atlantiq-jobsmenu {
-    ul {
-      li {
+      @include respond-to(md) {
         margin-bottom: 5px; // Anpassung für mobilen Abstand
 
         a {
-          font-size: 18px; // Mobile Schriftgröße für Untermenü
+          font-size: 18px;
         }
       }
     }

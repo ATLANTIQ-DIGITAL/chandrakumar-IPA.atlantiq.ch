@@ -21,10 +21,6 @@
 
 {% import _self as menus %}
 
-{#
-  We call a macro which calls itself to render the full tree.
-  @see http://twig.sensiolabs.org/doc/tags/macro.html
-#}
 {{ menus.menu_links(items, attributes, 0, menu_name, '') }}
 
 {% macro menu_links(items, attributes, menu_level, menu_name, menu_active) %}
@@ -104,6 +100,12 @@
 
       </li>
     {% endfor %}
+    <!-- Custom Icon for the Last Item -->
+    <li class="nav-item menu-level-0 icon-item">
+      <a href="#logo-atlantiq" class="nav-link">
+        <img src="{{ '/' ~ active_theme_path() ~ '/themes/custom/atlantiq/img/icons/caret-circle-up-thin.svg' }}" alt="">
+      </a>
+    </li>
   </ul>
   {% endif %}
   {% endmacro %}
