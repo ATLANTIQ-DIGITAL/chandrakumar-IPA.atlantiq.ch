@@ -1,9 +1,5 @@
 // typography.scss
 
-// Import der Variablen und Mixins
-@import 'fonts';
-@import 'mixins';
-
 // Stile für die Font-Familien
 body {
   font-family: $font-family-body;
@@ -31,6 +27,10 @@ ul {
 // Stile für Überschriften
 h1 {
   @include heading($h1-size, $font-family-heading);
+
+  @include respond-to(sm) {
+    font-size: $h1-size-small;
+  }
 
   // Optional: große Version für spezielle Fälle
   &.large {

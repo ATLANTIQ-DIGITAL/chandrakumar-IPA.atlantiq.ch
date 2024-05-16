@@ -66,7 +66,6 @@
  * @see template_preprocess_node()
  */
 #}
-
 {% set layout = layout ? 'layout--' ~ layout|clean_class %}
 
 {%
@@ -81,37 +80,37 @@
 ]
 %}
 <div class="kunde-container">
-<article{{ attributes.addClass(classes) }}>
-  <header class="{{ layout }}">
-    {{ title_prefix }}
-    {% if label and not page %}
-      {# Änderung h2 zu h1 tag. Jede h1 bekommt eine ID mit dem Textinhalt um so die OnPage Navigation zu verlinken #}
-      <h1{{ title_attributes.addClass('node__title') }} id="{{ label|render|striptags|trim|lower|replace({' ': '-', '_': '-', '/': '-', '\\': '-'}) }}">
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h1>
-    {% endif %}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        {% if author_picture %}
-          <div class="node__author-image">
-            {{ author_picture }}
-          </div>
-        {% endif %}
-        <span{{ author_attributes }}>
+  <article{{ attributes.addClass(classes) }}>
+    <header class="{{ layout }}">
+      {{ title_prefix }}
+      {% if label and not page %}
+        {# Hier wird das h1-Tag mit dem Inhalt des span-Tags verwendet #}
+        <h1{{ title_attributes.addClass('node__title') }} id="{{ label|render|striptags|trim|lower|replace({' ': '-', '_': '-', '/': '-', '\\': '-'}) }}">
+          {{ label }}
+        </h1>
+      {% endif %}
+      {{ title_suffix }}
+      {% if display_submitted %}
+        <div class="node__meta">
+          {% if author_picture %}
+            <div class="node__author-image">
+              {{ author_picture }}
+            </div>
+          {% endif %}
+          <span{{ author_attributes }}>
         {{ 'By'|t }} {% apply spaceless %}{{ author_name }}{% endapply %}, {{ date }}
       </span>
-        {{ metadata }}
+          {{ metadata }}
+        </div>
+      {% endif %}
+    </header>
+    <div{{ content_attributes.addClass('node__content', layout) }}>
+      {{ content|without('comment') }}
+    </div>
+    {% if content.comment %}
+      <div id="comments" class="{{ layout }}">
+        {{ content.comment }}
       </div>
     {% endif %}
-  </header>
-  <div{{ content_attributes.addClass('node__content', layout) }}>
-    {{ content|without('comment') }}
-  </div>
-  {% if content.comment %}
-    <div id="comments" class="{{ layout }}">
-      {{ content.comment }}
-    </div>
-  {% endif %}
-</article>
+  </article>
 </div>

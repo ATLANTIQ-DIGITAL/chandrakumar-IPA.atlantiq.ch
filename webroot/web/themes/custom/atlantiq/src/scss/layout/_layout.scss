@@ -1,18 +1,98 @@
-main > .container {
-  padding: 70px 15px 25px 30px;
+// layout.scss
+
+// Mixin für den gelben Streifen-Effekt
+@mixin yellow-stripe($font-size, $stripe-height) {
+  position: relative;
+  font-family: $font-family-heading;
+  font-size: $font-size;
+  color: $color-black;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &.active,
+  &:hover {
+    color: $color-black;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 20px);
+      height: $stripe-height;
+      background-color: $color-yellow;
+      z-index: -1;
+    }
+  }
+
+  &.active::before {
+    background-color: $color-yellow;
+  }
 }
 
-.paragraph {
-  margin-bottom: 5rem;
+// Logo-Styles
+#logo-atlantiq {
+  z-index: 1031;
+  position: absolute;
+  height: 45px;
 }
 
-.paragraph .paragraph {
-  margin-bottom: 1rem;
+// Anpassung für die Navigation, damit sie nur den linken Teil des Bildschirms einnimmt
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 56px;
+  height: 100%;
+  width: 300px;
+  z-index: 1030;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16vh 0 0 0;
+  background: none;
 }
 
-.paragraph--type--slider .field__item img {
-  width: 33%;
-  height: auto;
+.custom-nav-container {
+  width: 100%;
+}
+
+.menu__main {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column !important;
+
+  .nav-item {
+    height: 3rem;
+
+    .nav-link {
+      @include yellow-stripe(45px, 25px);
+    }
+  }
+}
+
+#block-atlantiq-leistungenmenu,
+#block-atlantiq-kundenmenu,
+#block-atlantiq-agenturmenu,
+#block-atlantiq-jobsmenu {
+  margin-top: 3rem;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 3px;
+
+      a {
+        @include yellow-stripe(23px, 15px);
+      }
+    }
+  }
 }
 
 // Allgemeine Container-Styles
@@ -23,21 +103,33 @@ main > .container {
 .paragraph-text-rechts-oben-container {
   @include full-size-container;
   overflow: hidden;
+  padding-top: map-get($container-padding, 'top');
+  padding-bottom: map-get($container-padding, 'bottom');
+  padding-left: map-get($container-padding, 'left-breit');
+  padding-right: map-get($container-padding, 'right-breit');
+
+  @include respond-to(md) {
+    padding-left: map-get($container-padding, 'left-schmal');
+    padding-right: map-get($container-padding, 'right-schmal');
+  }
+
+  @include respond-to(sm) {
+    padding-top: map-get($container-padding, 'mobile-top');
+    padding-bottom: map-get($container-padding, 'mobile-bottom');
+    padding-left: map-get($container-padding, 'mobile-left');
+    padding-right: map-get($container-padding, 'mobile-right');
+  }
+
+  h1 {
+    @include respond-to(sm) {
+      font-size: $h1-size-small;
+    }
+  }
 }
 
 // Spezifischer Hintergrund nur für 'stellen-container'
 .stellen-container {
   background-color: $yellow-background;
-}
-
-// Padding-Anpassungen für Kunde-Container, und Impressum
-.kunde-container,
-.impressum-container,
-.stellen-container {
-  padding-top: map-get($container-padding, 'top');
-  padding-bottom: map-get($container-padding, 'bottom');
-  padding-left: map-get($container-padding, 'left-breit');
-  padding-right: map-get($container-padding, 'right-breit');
 }
 
 // Padding-Anpassungen für Block-Text-oben-rechts-Container
@@ -46,17 +138,11 @@ main > .container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: map-get($container-padding, 'top');
   padding-right: 5vw;
-  padding-bottom: map-get($container-padding, 'bottom');
-  padding-left: map-get($container-padding, 'left-breit');
-  overflow: hidden; // Füge dies hinzu, um Überlaufen zu verhindern
 
   @include respond-to(md) {
     align-items: flex-end;
     justify-content: center;
-    padding-right: map-get($container-padding, 'right-schmal');
-    padding-left: map-get($container-padding, 'left-schmal');
   }
 
   @include respond-to(sm) {
@@ -76,21 +162,25 @@ main > .container {
 
     @include respond-to(sm) {
       max-width: 100%;
-      padding: 20px; // Füge Padding für die mobile Ansicht hinzu
-      overflow: auto; // Füge dies hinzu, um Überlaufen zu verhindern
+      padding: 20px;
+      overflow: auto;
     }
 
     h1 {
-      color: #FFFF00; // Farbe der Überschrift
+      color: #FFFF00;
       @include heading($h1-size, $font-family-heading);
 
       @include respond-to(md) {
         font-size: $h1-size-large;
       }
+
+      @include respond-to(sm) {
+        font-size: $h1-size-small;
+      }
     }
 
     p {
-      color: #000000; // Farbe des Beschreibungstexts
+      color: #000000;
       @include body-text($p-size, $font-family-body);
 
       @include respond-to(md) {
@@ -102,11 +192,7 @@ main > .container {
 
 // Padding-Anpassungen für Paragraph mit Block-Text-Mitte
 .paragraph--type--block-text-mitte {
-  background-color: $light-grey-background!important;
-  padding-top: map-get($container-padding, 'top');
-  padding-bottom: map-get($container-padding, 'bottom');
-  padding-left: map-get($container-padding, 'left-breit');
-  padding-right: map-get($container-padding, 'right-breit');
+  background-color: $light-grey-background !important;
 }
 
 // Padding für Paragraph-Block der den Spalten-Abschnitt darstellt
@@ -117,4 +203,8 @@ main > .container {
 // Sonstiges
 .node__meta {
   display: none;
+}
+.paragraph--type--slider .field__item img {
+  width: 100%;
+  height: auto;
 }

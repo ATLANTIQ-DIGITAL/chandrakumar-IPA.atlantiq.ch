@@ -11577,21 +11577,6 @@ textarea.form-control-lg {
   src: url("../../fonts/3249CF_2_0.eot");
   src: url("../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../fonts/3249CF_2_0.woff") format("woff"), url("../../fonts/3249CF_2_0.ttf") format("truetype");
 }
-@font-face {
-  font-family: "CharterBT-Bold";
-  src: url("../../fonts/3249CF_0_0.eot");
-  src: url("../../fonts/3249CF_0_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_0_0.woff2") format("woff2"), url("../../fonts/3249CF_0_0.woff") format("woff"), url("../../fonts/3249CF_0_0.ttf") format("truetype");
-}
-@font-face {
-  font-family: "CharterBT-Roman";
-  src: url("../../fonts/3249CF_1_0.eot");
-  src: url("../../fonts/3249CF_1_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_1_0.woff2") format("woff2"), url("../../fonts/3249CF_1_0.woff") format("woff"), url("../../fonts/3249CF_1_0.ttf") format("truetype");
-}
-@font-face {
-  font-family: "CharterBT-Italic";
-  src: url("../../fonts/3249CF_2_0.eot");
-  src: url("../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../fonts/3249CF_2_0.woff") format("woff"), url("../../fonts/3249CF_2_0.ttf") format("truetype");
-}
 body {
   font-family: "DIN Next LT Pro Condensed", sans-serif;
 }
@@ -11618,6 +11603,11 @@ ul {
 h1, .h1 {
   font-size: 4.0625rem;
   font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+}
+@media (max-width: 576px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
 }
 h1.large, .large.h1 {
   font-size: 4.25rem;
@@ -11667,7 +11657,7 @@ body {
   font-family: "DIN Next LT Pro Condensed", sans-serif;
   font-size: 1rem;
   color: #000000;
-  line-height: 1.6;
+  line-height: 21px;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -11681,21 +11671,130 @@ a {
   color: inherit;
 }
 
-main > .container {
-  padding: 70px 15px 25px 30px;
+#logo-atlantiq {
+  z-index: 1031;
+  position: absolute;
+  height: 45px;
 }
 
-.paragraph {
-  margin-bottom: 5rem;
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 56px;
+  height: 100%;
+  width: 300px;
+  z-index: 1030;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 16vh 0 0 0;
+  background: none;
 }
 
-.paragraph .paragraph {
-  margin-bottom: 1rem;
+.custom-nav-container {
+  width: 100%;
 }
 
-.paragraph--type--slider .field__item img {
-  width: 33%;
-  height: auto;
+.menu__main {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column !important;
+}
+.menu__main .nav-item {
+  height: 3rem;
+}
+.menu__main .nav-item .nav-link {
+  position: relative;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+  font-size: 45px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.menu__main .nav-item .nav-link.active, .menu__main .nav-item .nav-link:hover {
+  color: #000000;
+}
+.menu__main .nav-item .nav-link.active::before, .menu__main .nav-item .nav-link:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: 25px;
+  background-color: #ffff00;
+  z-index: -1;
+}
+.menu__main .nav-item .nav-link.active::before {
+  background-color: #ffff00;
+}
+
+#block-atlantiq-leistungenmenu,
+#block-atlantiq-kundenmenu,
+#block-atlantiq-agenturmenu,
+#block-atlantiq-jobsmenu {
+  margin-top: 3rem;
+}
+#block-atlantiq-leistungenmenu ul,
+#block-atlantiq-kundenmenu ul,
+#block-atlantiq-agenturmenu ul,
+#block-atlantiq-jobsmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#block-atlantiq-leistungenmenu ul li,
+#block-atlantiq-kundenmenu ul li,
+#block-atlantiq-agenturmenu ul li,
+#block-atlantiq-jobsmenu ul li {
+  margin-bottom: 3px;
+}
+#block-atlantiq-leistungenmenu ul li a,
+#block-atlantiq-kundenmenu ul li a,
+#block-atlantiq-agenturmenu ul li a,
+#block-atlantiq-jobsmenu ul li a {
+  position: relative;
+  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
+  font-size: 23px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#block-atlantiq-leistungenmenu ul li a.active, #block-atlantiq-leistungenmenu ul li a:hover,
+#block-atlantiq-kundenmenu ul li a.active,
+#block-atlantiq-kundenmenu ul li a:hover,
+#block-atlantiq-agenturmenu ul li a.active,
+#block-atlantiq-agenturmenu ul li a:hover,
+#block-atlantiq-jobsmenu ul li a.active,
+#block-atlantiq-jobsmenu ul li a:hover {
+  color: #000000;
+}
+#block-atlantiq-leistungenmenu ul li a.active::before, #block-atlantiq-leistungenmenu ul li a:hover::before,
+#block-atlantiq-kundenmenu ul li a.active::before,
+#block-atlantiq-kundenmenu ul li a:hover::before,
+#block-atlantiq-agenturmenu ul li a.active::before,
+#block-atlantiq-agenturmenu ul li a:hover::before,
+#block-atlantiq-jobsmenu ul li a.active::before,
+#block-atlantiq-jobsmenu ul li a:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: 15px;
+  background-color: #ffff00;
+  z-index: -1;
+}
+#block-atlantiq-leistungenmenu ul li a.active::before,
+#block-atlantiq-kundenmenu ul li a.active::before,
+#block-atlantiq-agenturmenu ul li a.active::before,
+#block-atlantiq-jobsmenu ul li a.active::before {
+  background-color: #ffff00;
 }
 
 .stellen-container,
@@ -11706,19 +11805,49 @@ main > .container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-}
-
-.stellen-container {
-  background-color: #FFFF00;
-}
-
-.kunde-container,
-.impressum-container,
-.stellen-container {
   padding-top: 16vh;
   padding-bottom: 20vh;
   padding-left: 33vw;
   padding-right: 33vw;
+}
+@media (max-width: 768px) {
+  .stellen-container,
+  .kunde-container,
+  .person-container,
+  .paragraph--type--block-text-mitte,
+  .paragraph-text-rechts-oben-container {
+    padding-left: 25vw;
+    padding-right: 25vw;
+  }
+}
+@media (max-width: 576px) {
+  .stellen-container,
+  .kunde-container,
+  .person-container,
+  .paragraph--type--block-text-mitte,
+  .paragraph-text-rechts-oben-container {
+    padding-top: 6vh;
+    padding-bottom: 0vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+}
+@media (max-width: 576px) {
+  .stellen-container h1, .stellen-container .h1,
+  .kunde-container h1,
+  .kunde-container .h1,
+  .person-container h1,
+  .person-container .h1,
+  .paragraph--type--block-text-mitte h1,
+  .paragraph--type--block-text-mitte .h1,
+  .paragraph-text-rechts-oben-container h1,
+  .paragraph-text-rechts-oben-container .h1 {
+    font-size: 2rem;
+  }
+}
+
+.stellen-container {
+  background-color: #FFFF00;
 }
 
 .paragraph-text-rechts-oben-container {
@@ -11726,18 +11855,12 @@ main > .container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  padding-top: 16vh;
   padding-right: 5vw;
-  padding-bottom: 20vh;
-  padding-left: 33vw;
-  overflow: hidden;
 }
 @media (max-width: 768px) {
   .paragraph-text-rechts-oben-container {
     align-items: flex-end;
     justify-content: center;
-    padding-right: 25vw;
-    padding-left: 25vw;
   }
 }
 @media (max-width: 576px) {
@@ -11774,6 +11897,11 @@ main > .container {
     font-size: 4.25rem;
   }
 }
+@media (max-width: 576px) {
+  .paragraph-text-rechts-oben-container .content h1, .paragraph-text-rechts-oben-container .content .h1 {
+    font-size: 2rem;
+  }
+}
 .paragraph-text-rechts-oben-container .content p {
   color: #000000;
   font-size: 1rem;
@@ -11787,10 +11915,6 @@ main > .container {
 
 .paragraph--type--block-text-mitte {
   background-color: #F1f1f1 !important;
-  padding-top: 16vh;
-  padding-bottom: 20vh;
-  padding-left: 33vw;
-  padding-right: 33vw;
 }
 
 .paragraph--type--spaltenabschnitt {
@@ -11799,6 +11923,11 @@ main > .container {
 
 .node__meta {
   display: none;
+}
+
+.paragraph--type--slider .field__item img {
+  width: 100%;
+  height: auto;
 }
 
 .field--name-field-firmenname {
@@ -11852,14 +11981,22 @@ main > .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 16vh 0 0 0;
+  padding: 8vh 0 0 0;
   background: none;
 }
 @media (max-width: 768px) {
   .custom-nav {
+    width: 80%;
+    left: 10%;
+    height: auto;
+  }
+}
+@media (max-width: 576px) {
+  .custom-nav {
     width: 100%;
-    align-items: center;
-    padding: 0;
+    left: 0;
+    height: auto;
+    padding: 10vh 0 0 0;
   }
 }
 
@@ -11906,11 +12043,20 @@ main > .container {
 }
 @media (max-width: 768px) {
   .menu__main .nav-item {
-    height: 2rem;
+    height: 2.5rem;
     margin-bottom: 10px;
   }
   .menu__main .nav-item .nav-link {
     font-size: 32px;
+  }
+}
+@media (max-width: 576px) {
+  .menu__main .nav-item {
+    height: 2rem;
+    margin-bottom: 10px;
+  }
+  .menu__main .nav-item .nav-link {
+    font-size: 28px;
   }
 }
 
@@ -11990,6 +12136,20 @@ main > .container {
   #block-atlantiq-agenturmenu ul li a,
   #block-atlantiq-jobsmenu ul li a {
     font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  #block-atlantiq-leistungenmenu ul li,
+  #block-atlantiq-kundenmenu ul li,
+  #block-atlantiq-agenturmenu ul li,
+  #block-atlantiq-jobsmenu ul li {
+    margin-bottom: 5px;
+  }
+  #block-atlantiq-leistungenmenu ul li a,
+  #block-atlantiq-kundenmenu ul li a,
+  #block-atlantiq-agenturmenu ul li a,
+  #block-atlantiq-jobsmenu ul li a {
+    font-size: 16px;
   }
 }
 

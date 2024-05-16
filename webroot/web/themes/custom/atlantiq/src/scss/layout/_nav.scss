@@ -48,13 +48,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 16vh 0 0 0;
+  padding: 8vh 0 0 0;
   background: none; // Hintergrund entfernen
 
   @include respond-to(md) {
-    width: 100%; // Navigation über die gesamte Breite auf mobilen Geräten
-    align-items: center;
-    padding: 0;
+    width: 80%; // Breite der Navigation auf 80% für mittelgroße Geräte
+    left: 10%; // Zentrieren der Navigation
+    height: auto; // Höhe auf automatisch setzen
+  }
+
+  @include respond-to(sm) {
+    width: 100%; // Navigation über die gesamte Breite auf kleinen Geräten
+    left: 0; // Linker Rand auf 0 setzen
+    height: auto; // Höhe auf automatisch setzen
+    padding: 10vh 0 0 0; // Paddings anpassen für kleinere Bildschirme
   }
 }
 
@@ -78,11 +85,20 @@
     }
 
     @include respond-to(md) {
-      height: 2rem; // Anpassung der Höhe für mobile Geräte
+      height: 2.5rem; // Anpassung der Höhe für mittelgroße Geräte
       margin-bottom: 10px; // Anpassung für mobilen Abstand
 
       .nav-link {
         font-size: 32px; // Mobile Schriftgröße für Hauptmenü
+      }
+    }
+
+    @include respond-to(sm) {
+      height: 2rem; // Anpassung der Höhe für kleine Geräte
+      margin-bottom: 10px; // Anpassung für mobilen Abstand
+
+      .nav-link {
+        font-size: 28px; // Kleinere Schriftgröße für Hauptmenü auf kleinen Geräten
       }
     }
   }
@@ -110,7 +126,15 @@
         margin-bottom: 5px; // Anpassung für mobilen Abstand
 
         a {
-          font-size: 18px;
+          font-size: 18px; // Kleinere Schriftgröße für Subnavigation auf mittelgroßen Geräten
+        }
+      }
+
+      @include respond-to(sm) {
+        margin-bottom: 5px; // Anpassung für mobilen Abstand
+
+        a {
+          font-size: 16px; // Kleinere Schriftgröße für Subnavigation auf kleinen Geräten
         }
       }
     }

@@ -1,9 +1,9 @@
 $enable-rounded: false;
 
-// variables.scss
 $base-font-size: 16px;
 $h1-size: 4.0625rem; // 65pt
 $h1-size-large: 4.25rem; // 68pt
+$h1-size-small: 2rem; // Definieren Sie eine kleinere Größe für mobile Ansichten
 $h2-size: 2.8125rem; // 45pt
 $h2-size-large: 3rem; // 48pt
 $h3-size: 1.4375rem; // 23pt
@@ -16,7 +16,6 @@ $link-size-small: 0.75rem; // 12pt
 $nav-main-size: 2.8125rem; // 45pt
 $nav-sub-size: 1.4375rem; // 23pt
 
-
 // Definition des Container-Margin Höhe
 $container-margin: 56px 0 56px 0;
 
@@ -28,6 +27,9 @@ $container-padding: (
   'left-schmal': 25vw,
   'right-schmal': 25vw,
   'right-breit': 33vw,
-  'spalten': (16vh 10vw 16vh 25vw)
+  'spalten': (16vh 10vw 16vh 25vw),
+  'mobile-top': 6vh,
+  'mobile-bottom': 0vh,
+  'mobile-left': 7vw,
+  'mobile-right': 7vw
 );
-
