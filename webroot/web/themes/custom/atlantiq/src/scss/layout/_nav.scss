@@ -34,7 +34,13 @@
 #logo-atlantiq {
   z-index: 301;
   position: absolute;
+  top: 0; // Am oberen Rand positionieren
+  left: 50%; // Horizontal zentrieren
+  transform: translateX(-50%); // Horizontal zentrieren durch Verschieben um 50% der eigenen Breite
   height: 45px;
+  @include respond-to(md){
+    top: 41px;
+  }
 }
 
 // Anpassung für die Navigation, damit sie nur den linken Teil des Bildschirms einnimmt
@@ -140,3 +146,83 @@
     }
   }
 }
+
+//Nav Button
+.navbar-toggler {
+  position: fixed;
+  right: 3rem;
+  width: 60px; // Breite des Buttons
+  height: 30px; // Höhe des Buttons
+  border: none; // Entfernt den Standardrahmen
+  background: transparent; // Entfernt den Standardhintergrund
+  cursor: pointer;
+  z-index: 1051; // Sicherstellen, dass der Button über der Navigation liegt
+
+  .navbar-toggler-icon {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    background-color: transparent; // Entfernt die mittlere Linie
+    border-radius: 2px; // Abgerundete Ecken
+    transition: background-color 0.3s;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px; // Höhe der Linien
+      background-color: #000; // Farbe der Linien
+      border-radius: 2px; // Abgerundete Ecken
+      transition: transform 0.3s;
+    }
+
+    &:before {
+      top: -4px; // Abstand der oberen Linie
+    }
+
+    &:after {
+      top: 4px; // Abstand der unteren Linie
+    }
+  }
+
+  &:hover .navbar-toggler-icon {
+    background-color: transparent; // Kein Hintergrund für den Hover-Zustand
+
+    &:before,
+    &:after {
+      background-color: #333; // Ändert die Farbe der oberen und unteren Linie bei Hover
+    }
+  }
+
+  &[aria-expanded='true'] .navbar-toggler-icon {
+    background-color: transparent;
+
+    &:before {
+      transform: translateY(4px) rotate(45deg); // Transformation bei aktivem Zustand
+    }
+
+    &:after {
+      transform: translateY(-4px) rotate(-45deg); // Transformation bei aktivem Zustand
+    }
+  }
+}
+
+// Fullscreen Navigation
+.navbar-collapse.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1050; // Hintergrund hinter dem Button
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+

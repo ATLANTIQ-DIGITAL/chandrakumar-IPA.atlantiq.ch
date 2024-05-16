@@ -1,97 +1,8 @@
 // layout.scss
 
-// Mixin für den gelben Streifen-Effekt
-@mixin yellow-stripe($font-size, $stripe-height) {
-  position: relative;
-  font-family: $font-family-heading;
-  font-size: $font-size;
-  color: $color-black;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &.active,
-  &:hover {
-    color: $color-black;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: calc(100% + 20px);
-      height: $stripe-height;
-      background-color: $color-yellow;
-      z-index: -1;
-    }
-  }
-
-  &.active::before {
-    background-color: $color-yellow;
-  }
-}
-
-// Logo-Styles
-#logo-atlantiq {
-  z-index: 1031;
-  position: absolute;
-  height: 45px;
-}
-
-// Anpassung für die Navigation, damit sie nur den linken Teil des Bildschirms einnimmt
-.custom-nav {
-  position: fixed;
-  top: 0;
-  left: 56px;
-  height: 100%;
-  width: 300px;
-  z-index: 1030;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 16vh 0 0 0;
-  background: none;
-}
-
-.custom-nav-container {
-  width: 100%;
-}
-
-.menu__main {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column !important;
-
-  .nav-item {
-    height: 3rem;
-
-    .nav-link {
-      @include yellow-stripe(45px, 25px);
-    }
-  }
-}
-
-#block-atlantiq-leistungenmenu,
-#block-atlantiq-kundenmenu,
-#block-atlantiq-agenturmenu,
-#block-atlantiq-jobsmenu {
-  margin-top: 3rem;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin-bottom: 3px;
-
-      a {
-        @include yellow-stripe(23px, 15px);
-      }
-    }
+@include respond-to(md) {
+  .node__content {
+    margin-top: 125px;
   }
 }
 
@@ -125,7 +36,7 @@
 
   h1 {
     @include respond-to(sm) {
-      font-size: $h1-size-small;
+      font-size: $h1-size-small!important;
     }
   }
 }
@@ -249,9 +160,11 @@
 .paragraph--type--block-text-mitte {
   background-color: $light-grey-background !important;
 }
-article[data-history-node-id="1"] .paragraph--type--block-text-mitte, // Startseite
-article[data-history-node-id="16"] .paragraph--type--block-text-mitte // Jobs
-{
+
+article[data-history-node-id="1"] .paragraph--type--block-text-mitte {
+  @include respond-to(md) {
+    height: 100vh !important;
+  }
   display: flex !important;
   justify-content: center !important;
   align-content: center !important;
@@ -264,6 +177,24 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte // Jobs
     }
   }
 }
+
+article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
+  @include respond-to(md) {
+    height: inherit !important;
+  }
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+
+  @include respond-to(sm) {
+    img.align-center {
+      width: 19rem !important;
+      height: auto;
+    }
+  }
+}
+
 
 
 

@@ -17,6 +17,7 @@
   height: 100vh;
   border: 4px solid;
   border-color: $color-light-grey-border;
+  margin-top: 23px;
 
   @include respond-to(sm) {
     height: inherit; //Für mobile Ansichten
