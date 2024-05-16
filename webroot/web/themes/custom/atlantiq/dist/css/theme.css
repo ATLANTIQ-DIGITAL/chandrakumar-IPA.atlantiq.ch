@@ -11801,23 +11801,38 @@ a {
 .kunde-container,
 .person-container,
 .paragraph--type--block-text-mitte,
-.paragraph-text-rechts-oben-container {
+.paragraph-text-rechts-oben-container,
+.impressum-container {
   width: 100vw;
   height: 100vh;
+  border: 4px solid;
+  border-color: rgba(241, 241, 241, 0.1);
   overflow: hidden;
   padding-top: 16vh;
   padding-bottom: 20vh;
   padding-left: 33vw;
   padding-right: 33vw;
 }
+@media (max-width: 576px) {
+  .stellen-container,
+  .kunde-container,
+  .person-container,
+  .paragraph--type--block-text-mitte,
+  .paragraph-text-rechts-oben-container,
+  .impressum-container {
+    height: inherit;
+  }
+}
 @media (max-width: 768px) {
   .stellen-container,
   .kunde-container,
   .person-container,
   .paragraph--type--block-text-mitte,
-  .paragraph-text-rechts-oben-container {
+  .paragraph-text-rechts-oben-container,
+  .impressum-container {
     padding-left: 25vw;
     padding-right: 25vw;
+    height: inherit;
   }
 }
 @media (max-width: 576px) {
@@ -11825,11 +11840,13 @@ a {
   .kunde-container,
   .person-container,
   .paragraph--type--block-text-mitte,
-  .paragraph-text-rechts-oben-container {
+  .paragraph-text-rechts-oben-container,
+  .impressum-container {
     padding-top: 6vh;
     padding-bottom: 0vh;
     padding-left: 7vw;
     padding-right: 7vw;
+    height: inherit;
   }
 }
 @media (max-width: 576px) {
@@ -11841,13 +11858,42 @@ a {
   .paragraph--type--block-text-mitte h1,
   .paragraph--type--block-text-mitte .h1,
   .paragraph-text-rechts-oben-container h1,
-  .paragraph-text-rechts-oben-container .h1 {
+  .paragraph-text-rechts-oben-container .h1,
+  .impressum-container h1,
+  .impressum-container .h1 {
     font-size: 2rem;
   }
 }
 
 .stellen-container {
   background-color: #FFFF00;
+}
+
+.impressum-container {
+  padding-right: 25vw;
+}
+@media (max-width: 1200px) {
+  .impressum-container {
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+}
+@media (max-width: 768px) {
+  .impressum-container {
+    padding-right: 25vw;
+    padding-left: 25vw;
+  }
+}
+@media (max-width: 576px) {
+  .impressum-container {
+    padding-right: 7vw;
+    padding-left: 7vw;
+  }
+}
+
+.kunde-container,
+.person-container {
+  height: inherit !important;
 }
 
 .paragraph-text-rechts-oben-container {
@@ -11871,6 +11917,14 @@ a {
     padding: 0;
   }
 }
+@media (max-width: 1200px) {
+  .paragraph-text-rechts-oben-container {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
 .paragraph-text-rechts-oben-container .content {
   max-width: 50%;
   padding: 20px;
@@ -11881,6 +11935,13 @@ a {
   }
 }
 @media (max-width: 576px) {
+  .paragraph-text-rechts-oben-container .content {
+    max-width: 100%;
+    padding: 20px;
+    overflow: auto;
+  }
+}
+@media (max-width: 1200px) {
   .paragraph-text-rechts-oben-container .content {
     max-width: 100%;
     padding: 20px;
@@ -11902,6 +11963,11 @@ a {
     font-size: 2rem;
   }
 }
+@media (max-width: 1200px) {
+  .paragraph-text-rechts-oben-container .content h1, .paragraph-text-rechts-oben-container .content .h1 {
+    font-size: 4.25rem;
+  }
+}
 .paragraph-text-rechts-oben-container .content p {
   color: #000000;
   font-size: 1rem;
@@ -11912,13 +11978,62 @@ a {
     font-size: 1rem;
   }
 }
+@media (max-width: 576px) {
+  .paragraph-text-rechts-oben-container .content p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .paragraph-text-rechts-oben-container .content p {
+    font-size: 1rem;
+  }
+}
 
 .paragraph--type--block-text-mitte {
   background-color: #F1f1f1 !important;
 }
 
+article[data-history-node-id="1"] .paragraph--type--block-text-mitte,
+article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+}
+@media (max-width: 576px) {
+  article[data-history-node-id="1"] .paragraph--type--block-text-mitte img.align-center,
+  article[data-history-node-id="16"] .paragraph--type--block-text-mitte img.align-center {
+    width: 19rem !important;
+    height: auto;
+  }
+}
+
 .paragraph--type--spaltenabschnitt {
+  width: 100vw;
+  height: 100vh;
+  border: 4px solid;
+  border-color: rgba(241, 241, 241, 0.1);
   padding: 16vh 10vw 16vh 25vw;
+}
+@media (max-width: 576px) {
+  .paragraph--type--spaltenabschnitt {
+    height: inherit;
+  }
+}
+@media (max-width: 992px) {
+  .paragraph--type--spaltenabschnitt {
+    padding: 16vh 10vw 16vh 11vw;
+    height: inherit;
+  }
+}
+@media (min-width: 1400px) {
+  .paragraph--type--spaltenabschnitt .row.row-cols-1.row-cols-lg-3 .mb-3.mb-lg-0.col-lg-4:nth-child(1) {
+    margin-top: 50px;
+  }
+  .paragraph--type--spaltenabschnitt .row.row-cols-1.row-cols-lg-3 .mb-3.mb-lg-0.col-lg-4:nth-child(2) {
+    margin-top: -100px;
+    margin-left: 45px;
+  }
 }
 
 .node__meta {
@@ -11928,10 +12043,6 @@ a {
 .paragraph--type--slider .field__item img {
   width: 100%;
   height: auto;
-}
-
-.field--name-field-firmenname {
-  font-weight: bold;
 }
 
 #block-atlantiq-footeroben {
@@ -11952,6 +12063,44 @@ a {
 #block-atlantiq-footeroben .field:last-child {
   margin-right: 0;
 }
+@media (max-width: 768px) {
+  #block-atlantiq-footeroben {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  article[data-history-node-id="16"] #block-atlantiq-footeroben {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1600px) {
+  article[data-history-node-id="16"] .stellen-container {
+    height: inherit;
+  }
+}
+
+@media (max-width: 576px) {
+  article[data-history-node-id="1"] .paragraph--type--block-text-mitte {
+    height: 100vh !important;
+  }
+  article[data-history-node-id="1"] .paragraph--type--block-text-mitte #block-atlantiq-footeroben {
+    display: flex !important; /* Sicherstellen, dass der Footer sichtbar ist */
+  }
+  article[data-history-node-id="1"] .paragraph--type--block-text-mitte .field--name-field-beschreibungstext-mitte {
+    margin-bottom: 70% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  article[data-history-node-id="1"] .field--name-field-beschreibungstext-mitte {
+    bottom: 23% !important;
+  }
+}
+
+.field--name-field-firmenname {
+  font-weight: bold;
+}
 
 .footer-column {
   margin-left: 1rem;
@@ -11966,7 +12115,7 @@ a {
 }
 
 #logo-atlantiq {
-  z-index: 1031;
+  z-index: 301;
   position: absolute;
   height: 45px;
 }
@@ -11977,7 +12126,7 @@ a {
   left: 56px;
   height: 100%;
   width: 300px;
-  z-index: 1030;
+  z-index: 300;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

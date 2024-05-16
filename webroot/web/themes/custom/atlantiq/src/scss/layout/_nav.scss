@@ -32,7 +32,7 @@
 
 // Logo-Styles
 #logo-atlantiq {
-  z-index: 1031;
+  z-index: 301;
   position: absolute;
   height: 45px;
 }
@@ -44,7 +44,7 @@
   left: 56px;
   height: 100%;
   width: 300px; // Breite der Navigation auf 300px festlegen
-  z-index: 1030; // Sicherstellen, dass die Navigation über dem restlichen Inhalt liegt
+  z-index: 300; // Sicherstellen, dass die Navigation über dem restlichen Inhalt liegt
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

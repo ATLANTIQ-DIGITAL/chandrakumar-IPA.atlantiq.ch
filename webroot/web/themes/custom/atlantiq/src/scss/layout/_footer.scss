@@ -1,7 +1,11 @@
-.field--name-field-firmenname{
-  font-weight: bold;
+@mixin hide-footer {
+  @include respond-to(md) {
+    display: none;
+  }
 }
-#block-atlantiq-footeroben{
+
+// Stile für den Footer
+#block-atlantiq-footeroben {
   z-index: 1;
   position: absolute;
   bottom: 0;
@@ -20,13 +24,62 @@
       margin-right: 0;
     }
   }
+
+  // Standardmäßig den Footer bis zum md-Breakpoint ausblenden
+  @include hide-footer;
 }
+
+// Spezifische Stile für node article mit id 16
+article[data-history-node-id="16"] {
+  @include respond-to(md) {
+    #block-atlantiq-footeroben {
+      display: none;
+    }
+  }
+
+  // Zusätzliche spezifische Stile für den Container von md bis 1600px
+  @media (min-width: 768px) and (max-width: 1600px) {
+    .stellen-container {
+      height: inherit;
+    }
+  }
+}
+
+// Stile für das article-Element mit data-history-node-id="1"
+article[data-history-node-id="1"] .paragraph--type--block-text-mitte {
+  @include respond-to(sm) {
+    height: 100vh !important;
+
+    #block-atlantiq-footeroben {
+      display: flex !important; /* Sicherstellen, dass der Footer sichtbar ist */
+    }
+
+    .field--name-field-beschreibungstext-mitte {
+      margin-bottom: 70% !important;
+    }
+  }
+}
+
+// Zusätzliche spezifische Stile für node 1
+article[data-history-node-id="1"] {
+  @include respond-to(sm) {
+    .field--name-field-beschreibungstext-mitte {
+      bottom: 23% !important;
+    }
+  }
+}
+
+// Zusätzliche allgemeine Stile
+.field--name-field-firmenname {
+  font-weight: bold;
+}
+
 .footer-column {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-#block-atlantiq-beschreibungstextlinks{
+#block-atlantiq-beschreibungstextlinks {
   z-index: 1;
   position: absolute;
   bottom: 3%;

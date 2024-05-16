@@ -100,7 +100,8 @@
 .kunde-container,
 .person-container,
 .paragraph--type--block-text-mitte,
-.paragraph-text-rechts-oben-container {
+.paragraph-text-rechts-oben-container,
+.impressum-container{
   @include full-size-container;
   overflow: hidden;
   padding-top: map-get($container-padding, 'top');
@@ -111,6 +112,7 @@
   @include respond-to(md) {
     padding-left: map-get($container-padding, 'left-schmal');
     padding-right: map-get($container-padding, 'right-schmal');
+    height: inherit;
   }
 
   @include respond-to(sm) {
@@ -118,6 +120,7 @@
     padding-bottom: map-get($container-padding, 'mobile-bottom');
     padding-left: map-get($container-padding, 'mobile-left');
     padding-right: map-get($container-padding, 'mobile-right');
+    height: inherit;
   }
 
   h1 {
@@ -130,6 +133,30 @@
 // Spezifischer Hintergrund nur für 'stellen-container'
 .stellen-container {
   background-color: $yellow-background;
+}
+// Spezifisches Padding für die Impressum-Container
+.impressum-container {
+  padding-right: map-get($container-padding, 'right-schmal');
+
+  @include respond-to(xl) {
+    padding-right: map-get($container-padding, 'mobile-right');
+    padding-left: map-get($container-padding, 'mobile-left');
+  }
+  @include respond-to(md) {
+    padding-right: map-get($container-padding, 'right-schmal');
+    padding-left: map-get($container-padding, 'left-schmal');
+  }
+
+  @include respond-to(sm) {
+    padding-right: map-get($container-padding, 'mobile-right');
+    padding-left: map-get($container-padding, 'mobile-left');
+  }
+
+}
+// Spezifische Höhe für die Kunden und Person-Container
+.kunde-container,
+.person-container {
+  height: inherit!important;
 }
 
 // Padding-Anpassungen für Block-Text-oben-rechts-Container
@@ -152,6 +179,14 @@
     padding: 0;
   }
 
+  // Ergänzung für xl-Breakpoint
+  @include respond-to(xl) {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0;
+  }
+
   .content {
     max-width: 50%;
     padding: 20px;
@@ -161,6 +196,12 @@
     }
 
     @include respond-to(sm) {
+      max-width: 100%;
+      padding: 20px;
+      overflow: auto;
+    }
+
+    @include respond-to(xl) {
       max-width: 100%;
       padding: 20px;
       overflow: auto;
@@ -177,6 +218,10 @@
       @include respond-to(sm) {
         font-size: $h1-size-small;
       }
+
+      @include respond-to(xl) {
+        font-size: $h1-size-large;
+      }
     }
 
     p {
@@ -186,19 +231,70 @@
       @include respond-to(md) {
         font-size: $p-size;
       }
+
+      @include respond-to(sm) {
+        font-size: $p-size;
+      }
+
+      @include respond-to(xl) {
+        font-size: $p-size;
+      }
     }
   }
 }
 
-// Padding-Anpassungen für Paragraph mit Block-Text-Mitte
+
+
+// Spezifische Anpassung für Paragraph mit Block-Text-Mitte Startseite/Jobs
 .paragraph--type--block-text-mitte {
   background-color: $light-grey-background !important;
 }
+article[data-history-node-id="1"] .paragraph--type--block-text-mitte, // Startseite
+article[data-history-node-id="16"] .paragraph--type--block-text-mitte // Jobs
+{
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+  flex-wrap: wrap !important;
+
+  @include respond-to(sm) {
+    img.align-center {
+      width: 19rem !important;
+      height: auto;
+    }
+  }
+}
+
+
 
 // Padding für Paragraph-Block der den Spalten-Abschnitt darstellt
 .paragraph--type--spaltenabschnitt {
+  @include full-size-container;
   padding: map-get($container-padding, 'spalten');
+
+  // Anpassungen für Breakpoints bis einschließlich lg
+  @include respond-to(lg) {
+    padding: 16vh 10vw 16vh 11vw;
+    height: inherit;
+  }
+
+  // Selektor für das erste und zweite Kind ansprechen innerhalb des Containers
+  .row.row-cols-1.row-cols-lg-3 {
+    @media (min-width: 1400px) {
+       .mb-3.mb-lg-0.col-lg-4:nth-child(1) {
+        margin-top: 50px;
+      }
+       .mb-3.mb-lg-0.col-lg-4:nth-child(2) {
+        margin-top: -100px;
+        margin-left: 45px;
+      }
+    }
+  }
 }
+
+
+
+
 
 // Sonstiges
 .node__meta {
