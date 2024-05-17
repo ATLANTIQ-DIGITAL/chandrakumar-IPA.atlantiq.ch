@@ -11672,7 +11672,7 @@ a {
 }
 
 @media (max-width: 768px) {
-  .node__content {
+  .node--type-page > div.node__content:first-of-type {
     margin-top: 125px;
   }
 }

@@ -1,10 +1,11 @@
 // layout.scss
 
 @include respond-to(md) {
-  .node__content {
-    margin-top: 125px;
+  .node--type-page > div.node__content:first-of-type {
+    margin-top: 125px; //Abstand vom Logo zum Inhalt
   }
 }
+
 
 // Allgemeine Container-Styles
 .stellen-container,

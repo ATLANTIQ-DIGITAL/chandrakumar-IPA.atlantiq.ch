@@ -5,37 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5c77da6-dbbc-4f28-9705-957ee6b3453a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/templates/views-view-unformatted.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_0_0.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_1_0.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/3249CF_2_0.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts/charter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/js/carousel_transition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/js/team_manager_drag_and_drop.js" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/js/team_manager_drag_and_drop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/src/Controller/TeamManagerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/src/Controller/TeamManagerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.info.yml" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.info.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.module" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/modules/custom/team_manager/team_manager.module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_member_order/team_member_order.info.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/web/modules/custom/team_member_order/team_member_order.module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/dist/css/theme.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/base/_fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/base/_fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/layout/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/src/scss/layout/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/field/field--paragraph--field-images--slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/field/field--paragraph--field-images--slider.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/paragraphs/paragraph--slider.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/paragraphs/paragraph--slider.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/views/views-view-unformatted.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/templates/views/views-view-unformatted.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,6 +180,9 @@
       <path value="$PROJECT_DIR$/webroot/vendor/doctrine/lexer" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -213,26 +191,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
-    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
-    "WebServerToolWindowPanel.toolwindow.show.date": "false",
-    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
-    "WebServerToolWindowPanel.toolwindow.show.size": "false",
-    "last_opened_file_path": "/Users/user/Documents/chandrakumar-IPA.atlantiq.ch/webroot/web/themes/custom/atlantiq/fonts",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/Documents/chandrakumar-IPA.atlantiq.ch/webroot/web/themes/custom/atlantiq/fonts&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/webroot/web/themes/custom/atlantiq/fonts" />
@@ -263,10 +241,23 @@
       <workItem from="1715320814403" duration="29041000" />
       <workItem from="1715578972266" duration="20990000" />
       <workItem from="1715665540579" duration="26561000" />
+      <workItem from="1715752042288" duration="30936000" />
+      <workItem from="1715838639543" duration="37230000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
