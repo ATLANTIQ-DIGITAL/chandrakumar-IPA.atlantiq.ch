@@ -16,9 +16,9 @@ class TeamManagerController extends ControllerBase {
       if (!empty($item['id'])) {
         $node = Node::load($item['id']);
         if ($node) {
-          // Setze das Gewicht entsprechend der neuen Reihenfolge
-          $node->set('field_gewichtung_value', $item['index']); // 'index' verwenden
-          // Speichere den Knoten
+          // Gewicht entsprechend der neuen Reihenfolge setzen
+          $node->set('field_gewichtung_value', $item['index']);
+          // Speichern
           $node->save();
           $responses[] = ['id' => $item['id'], 'status' => 'updated'];
         }
