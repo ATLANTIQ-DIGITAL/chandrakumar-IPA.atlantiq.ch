@@ -1,9 +1,9 @@
 // Mixin für den gelben Streifen-Effekt
 @mixin yellow-stripe($font-size, $stripe-height) {
-  position: relative; // Um Pseudo-Elemente verwenden zu können
+  position: relative;
   font-family: $font-family-heading;
-  font-size: $font-size; // Überschriften-Größe
-  color: $color-black; // Standardfarbe
+  font-size: $font-size;
+  color: $color-black;
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.3s;
@@ -55,12 +55,12 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 8vh 0 0 0;
-  background: none; // Hintergrund entfernen
+  background: none;
 
   @include respond-to(md) {
-    width: 80%; // Breite der Navigation auf 80% für mittelgroße Geräte
+    width: 80%; // Breite der Navigation auf 80% für mittelgrosse Geräte
     left: 10%; // Zentrieren der Navigation
-    height: auto; // Höhe auf automatisch setzen
+    height: auto;
   }
 
   @include respond-to(sm) {
@@ -224,5 +224,13 @@
   align-items: center;
   justify-content: center;
 }
-
-
+//icon
+.menu__main {
+  .nav-item {
+    .nav-link {
+      &[href="#logo-atlantiq"] {
+        width: 50px;
+      }
+    }
+  }
+}

@@ -12,6 +12,3 @@ twig:
   auto_reload: true
   cache: false
 
-# Define custom templates.
-templates:
-  - '/modules/custom/team_manager/templates/views-view-unformatted.html.twig'

@@ -11564,40 +11564,38 @@ textarea.form-control-lg {
 }
 @font-face {
   font-family: "CharterBT-Bold";
-  src: url("../../fonts/3249CF_0_0.eot");
-  src: url("../../fonts/3249CF_0_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_0_0.woff2") format("woff2"), url("../../fonts/3249CF_0_0.woff") format("woff"), url("../../fonts/3249CF_0_0.ttf") format("truetype");
+  src: url("../../../fonts/3249CF_0_0.eot");
+  src: url("../../../fonts/3249CF_0_0.eot?#iefix") format("embedded-opentype"), url("../../../fonts/3249CF_0_0.woff2") format("woff2"), url("../../../fonts/3249CF_0_0.woff") format("woff"), url("../../../fonts/3249CF_0_0.ttf") format("truetype");
 }
 @font-face {
   font-family: "CharterBT-Roman";
-  src: url("../../fonts/3249CF_1_0.eot");
-  src: url("../../fonts/3249CF_1_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_1_0.woff2") format("woff2"), url("../../fonts/3249CF_1_0.woff") format("woff"), url("../../fonts/3249CF_1_0.ttf") format("truetype");
+  src: url("../../../fonts/3249CF_1_0.eot");
+  src: url("../../../fonts/3249CF_1_0.eot?#iefix") format("embedded-opentype"), url("../../../fonts/3249CF_1_0.woff2") format("woff2"), url("../../../fonts/3249CF_1_0.woff") format("woff"), url("../../../fonts/3249CF_1_0.ttf") format("truetype");
 }
 @font-face {
   font-family: "CharterBT-Italic";
-  src: url("../../fonts/3249CF_2_0.eot");
-  src: url("../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../fonts/3249CF_2_0.woff") format("woff"), url("../../fonts/3249CF_2_0.ttf") format("truetype");
+  src: url("../../../fonts/3249CF_2_0.eot");
+  src: url("../../../fonts/3249CF_2_0.eot?#iefix") format("embedded-opentype"), url("../../../fonts/3249CF_2_0.woff2") format("woff2"), url("../../../fonts/3249CF_2_0.woff") format("woff"), url("../../../fonts/3249CF_2_0.ttf") format("truetype");
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: "DIN Next LT Pro Condensed", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 21px;
+  font-size: 1rem;
   font-family: "DIN Next LT Pro Condensed", sans-serif;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
-}
-
-em, i {
-  font-family: "CharterBT-Italic", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 h1, .h1 {
@@ -11640,6 +11638,8 @@ p {
 }
 
 a {
+  text-decoration: none;
+  color: inherit;
   font-size: 1rem;
   font-family: "DIN Next LT Pro Condensed", sans-serif;
 }
@@ -11647,28 +11647,14 @@ a.small {
   font-size: 0.75rem;
 }
 
-* {
-  margin: 0;
+em, i {
+  font-family: "CharterBT-Italic", sans-serif;
+}
+
+ul {
+  list-style-type: none;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "DIN Next LT Pro Condensed", sans-serif;
-  font-size: 1rem;
-  color: #000000;
-  line-height: 21px;
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -11681,6 +11667,7 @@ a {
 .person-container,
 .paragraph--type--block-text-mitte,
 .paragraph-text-rechts-oben-container,
+.paragraph-dienstleistung-block-slider-container,
 .impressum-container {
   width: 100vw;
   height: 100vh;
@@ -11699,6 +11686,7 @@ a {
   .person-container,
   .paragraph--type--block-text-mitte,
   .paragraph-text-rechts-oben-container,
+  .paragraph-dienstleistung-block-slider-container,
   .impressum-container {
     height: inherit;
   }
@@ -11709,6 +11697,7 @@ a {
   .person-container,
   .paragraph--type--block-text-mitte,
   .paragraph-text-rechts-oben-container,
+  .paragraph-dienstleistung-block-slider-container,
   .impressum-container {
     padding-left: 25vw;
     padding-right: 25vw;
@@ -11721,6 +11710,7 @@ a {
   .person-container,
   .paragraph--type--block-text-mitte,
   .paragraph-text-rechts-oben-container,
+  .paragraph-dienstleistung-block-slider-container,
   .impressum-container {
     padding-top: 6vh;
     padding-bottom: 0vh;
@@ -11739,6 +11729,8 @@ a {
   .paragraph--type--block-text-mitte .h1,
   .paragraph-text-rechts-oben-container h1,
   .paragraph-text-rechts-oben-container .h1,
+  .paragraph-dienstleistung-block-slider-container h1,
+  .paragraph-dienstleistung-block-slider-container .h1,
   .impressum-container h1,
   .impressum-container .h1 {
     font-size: 2rem !important;
@@ -11829,7 +11821,6 @@ a {
   }
 }
 .paragraph-text-rechts-oben-container .content h1, .paragraph-text-rechts-oben-container .content .h1 {
-  color: #FFFF00;
   font-size: 4.0625rem;
   font-family: "Knockout 69 Full Liteweight", Impact, sans-serif;
 }
@@ -11849,7 +11840,6 @@ a {
   }
 }
 .paragraph-text-rechts-oben-container .content p {
-  color: #000000;
   font-size: 1rem;
   font-family: "DIN Next LT Pro Condensed", sans-serif;
 }
@@ -11867,10 +11857,6 @@ a {
   .paragraph-text-rechts-oben-container .content p {
     font-size: 1rem;
   }
-}
-
-.paragraph--type--block-text-mitte {
-  background-color: #F1f1f1 !important;
 }
 
 article[data-history-node-id="1"] .paragraph--type--block-text-mitte {
@@ -11909,6 +11895,11 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
   }
 }
 
+.paragraph--type--block-text-mitte,
+.paragraph-dienstleistung-block-slider-container {
+  background-color: #F1f1f1 !important;
+}
+
 .paragraph--type--spaltenabschnitt {
   width: 100vw;
   height: 100vh;
@@ -11945,6 +11936,10 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
 .paragraph--type--slider .field__item img {
   width: 100%;
   height: auto;
+}
+
+.views-field-field-abteilung {
+  font-weight: bold;
 }
 
 #block-atlantiq-footeroben {
@@ -12277,27 +12272,8 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
   justify-content: center;
 }
 
-.block-views-exposed-filter-blocksuche-page-1 form {
-  position: relative;
-}
-.block-views-exposed-filter-blocksuche-page-1 .form-actions > input:first-child {
-  text-indent: -999px;
-  overflow: hidden;
-  width: 40px;
-  padding: 0;
-  margin: 0;
-  border: 1px solid transparent;
-  border-radius: inherit;
-  background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="21.005" height="20.996" viewBox="0 0 21.005 20.996"><g id="Interaktionsgruppe" transform="translate(-1838.995 -99.004)"><g id="Lupe" transform="translate(1838.995 99.004)"><path id="Pfad" d="M.373,0A.369.369,0,0,0,0,.374L.017,2.106a.387.387,0,0,0,.38.381l9.831.1a.369.369,0,0,0,.373-.374L10.583.479A.388.388,0,0,0,10.2.1" transform="translate(13.51 11.674) rotate(45)"/><g id="Ellipse" transform="translate(16) rotate(90)" fill="none" stroke="%23000" stroke-width="2.51"><circle cx="8" cy="8" r="8" stroke="none"/><circle cx="8" cy="8" r="6.745" fill="none"/></g></g></g></svg>') no-repeat center;
-  cursor: pointer;
-  opacity: 0.7;
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem;
-}
-
-#block-hervorgehobenesformularsuchepage-1 .form-actions > input:first-child {
-  top: 1.1rem;
+.menu__main .nav-item .nav-link[href="#logo-atlantiq"] {
+  width: 50px;
 }
 
 .datenschutz-container {
@@ -12314,12 +12290,25 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
 /* Stil für das Handle */
 .datenschutz-container::-webkit-scrollbar-thumb {
   background-color: darkgrey; /* Farbe des Scrollbar-Handles */
-  border-radius: 10px; /* Rundung der Ecken des Handles */
+  border-radius: 10px;
 }
 
 /* Stil für die Bahn der Scrollbar */
 .datenschutz-container::-webkit-scrollbar-track {
   background: #f1f1f1; /* Farbe des Scrollbar-Tracks */
+}
+
+button.carousel-control-next svg {
+  width: 35px;
+}
+
+button.carousel-control-prev svg {
+  width: 35px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 6px;
+  height: 6px;
 }
 
 /*# sourceMappingURL=theme.css.map */

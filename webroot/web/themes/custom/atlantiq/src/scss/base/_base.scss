@@ -1,5 +1,4 @@
-// Grundlegende Styles, die auf das gesamte Projekt angewendet werden.
-// base.scss
+// combined-styles.scss
 
 // Reset-Stile
 * {
@@ -14,6 +13,8 @@ body {
   font-size: $p-size;
   color: $color-black;
   line-height: 21px;
+
+  @include body-text($p-size, $font-family-body);
 }
 
 // Typografie-Stile
@@ -23,10 +24,62 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+h1 {
+  @include heading($h1-size, $font-family-heading);
+
+  @include respond-to(sm) {
+    font-size: $h1-size-small;
+  }
+
+  &.large {
+    font-size: $h1-size-large;
+  }
+}
+
+h2 {
+  @include heading($h2-size, $font-family-heading);
+
+  &.large {
+    font-size: $h2-size-large;
+  }
+}
+
+h3 {
+  @include heading($h3-size, $font-family-heading);
+
+  &.large {
+    font-size: $h3-size-large;
+  }
+}
+
+h4 {
+  @include heading($h4-size, $font-family-heading);
+}
+
+// Weitere Stile für Absätze
+p {
+  @include body-text($p-size, $font-family-body);
+}
+
 // Links
 a {
   text-decoration: none;
   color: inherit;
+
+  @include body-text($link-size, $font-family-body);
+
+  &.small {
+    font-size: $link-size-small;
+  }
 }
 
+em, i {
+  font-family: 'CharterBT-Italic', sans-serif;
+}
 
+// Listen-Stile
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}

@@ -8,33 +8,11 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\node\Entity\Node;
 
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter() to provide template suggestions.
- */
-function team_manager_theme_suggestions_views_view_unformatted_alter(array &$suggestions, array $variables) {
-  // Aktuellen Routennamen abrufen
-  $current_route = \Drupal::routeMatch()->getRouteName();
-
-  // Überprüfung ob man sich im Bearbeitungsformular für Inhalte befindet
-  if (str_starts_with($current_route, 'entity.node.edit_form')) {
-    // Überprüfung ob es sich um einen Inhaltstyp "Person" handelt
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node && $node->getType() == 'person') {
-      // Twig File hinzufügen duch Hook
-      $suggestions[] = 'views_view_unformatted__node_edit_form';
-
-      // Debugging Text
-      \Drupal::messenger()->addMessage('test');
-    }
-  }
-}
-
-
 /**
  * Implements hook_ENTITY_TYPE_presave() for node entities.
  */
 
+//Inkrementierung der Gewichtung beim Erstellen eines neuen Nodes (Person)
 function team_manager_node_presave(EntityInterface $entity) {
   if ($entity->bundle() === 'person' && $entity->isNew()) {
     $query = \Drupal::entityQuery('node')

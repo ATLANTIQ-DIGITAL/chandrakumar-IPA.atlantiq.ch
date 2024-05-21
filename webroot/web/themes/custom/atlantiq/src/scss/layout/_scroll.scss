@@ -13,11 +13,11 @@ $container-scroll-margin: 15vh 25vw 0 33vw;
 /* Stil für das Handle */
 .datenschutz-container::-webkit-scrollbar-thumb {
   background-color: darkgrey; /* Farbe des Scrollbar-Handles */
-  border-radius: 10px; /* Rundung der Ecken des Handles */
+  border-radius: 10px;
 }
 
 /* Stil für die Bahn der Scrollbar */
 .datenschutz-container::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Farbe des Scrollbar-Tracks */
+  background: $color-light-grey; /* Farbe des Scrollbar-Tracks */
 }
 

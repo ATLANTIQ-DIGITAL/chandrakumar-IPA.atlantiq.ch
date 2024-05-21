@@ -1,11 +1,9 @@
 // layout.scss
-
 @include respond-to(md) {
   .node--type-page > div.node__content:first-of-type {
     margin-top: 125px; //Abstand vom Logo zum Inhalt
   }
 }
-
 
 // Allgemeine Container-Styles
 .stellen-container,
@@ -13,6 +11,7 @@
 .person-container,
 .paragraph--type--block-text-mitte,
 .paragraph-text-rechts-oben-container,
+.paragraph-dienstleistung-block-slider-container,
 .impressum-container{
   @include full-size-container;
   overflow: hidden;
@@ -120,7 +119,6 @@
     }
 
     h1 {
-      color: #FFFF00;
       @include heading($h1-size, $font-family-heading);
 
       @include respond-to(md) {
@@ -137,7 +135,6 @@
     }
 
     p {
-      color: #000000;
       @include body-text($p-size, $font-family-body);
 
       @include respond-to(md) {
@@ -156,12 +153,7 @@
 }
 
 
-
 // Spezifische Anpassung für Paragraph mit Block-Text-Mitte Startseite/Jobs
-.paragraph--type--block-text-mitte {
-  background-color: $light-grey-background !important;
-}
-
 article[data-history-node-id="1"] .paragraph--type--block-text-mitte {
   @include respond-to(md) {
     height: 100vh !important;
@@ -195,16 +187,17 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
     }
   }
 }
+.paragraph--type--block-text-mitte,
+.paragraph-dienstleistung-block-slider-container,{
+  background-color: $light-grey-background !important;
+}
 
-
-
-
-// Padding für Paragraph-Block der den Spalten-Abschnitt darstellt
+// Padding für Paragraph-Block der den Spaltenabschnitt darstellt
 .paragraph--type--spaltenabschnitt {
   @include full-size-container;
   padding: map-get($container-padding, 'spalten');
 
-  // Anpassungen für Breakpoints bis einschließlich lg
+  // spezifische Anpassungen für Breakpoints bis lg
   @include respond-to(lg) {
     padding: 16vh 10vw 16vh 11vw;
     height: inherit;
@@ -224,10 +217,6 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
   }
 }
 
-
-
-
-
 // Sonstiges
 .node__meta {
   display: none;
@@ -235,4 +224,7 @@ article[data-history-node-id="16"] .paragraph--type--block-text-mitte {
 .paragraph--type--slider .field__item img {
   width: 100%;
   height: auto;
+}
+.views-field-field-abteilung {
+  font-weight: bold;
 }

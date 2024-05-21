@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for the Dienstleistung Block Slider Paragraph.
+ *
+ * Available variables:
+ * - paragraph: The paragraph entity.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}.
+ * - attributes: HTML attributes for the containing element.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ */
+#}
+{% set layout = layout ? 'layout--' ~ layout|clean_class %}
+
+{%
+  set classes = [
+  'paragraph',
+  'paragraph--type-' ~ paragraph.bundle|clean_class,
+  layout ? 'grid-full',
+]
+%}
+<div class="paragraph-dienstleistung-block-slider-container">
+  <article{{ attributes.addClass(classes) }}>
+    <header class="{{ layout }}">
+      {{ title_prefix }}
+      {# Hier wird das h1-Tag mit dem Inhalt des Namens der Dienstleistung verwendet #}
+      {% if content.field_name_dienstleistung %}
+        <h1{{ title_attributes.addClass('paragraph__title') }} id="{{ content.field_name_dienstleistung.0['#markup']|render|striptags|trim|lower|replace({' ': '-', '_': '-', '/': '-', '\\': '-'}) }}">
+          {{ content.field_name_dienstleistung }}
+        </h1>
+      {% endif %}
+      {{ title_suffix }}
+    </header>
+    <div{{ content_attributes.addClass('paragraph__content', layout) }}>
+      {{ content.field_dienstleistung_beschreibun }}
+      {{ content.field_slider }}
+    </div>
+  </article>
+</div>
